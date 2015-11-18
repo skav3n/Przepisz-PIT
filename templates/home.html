@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+{% block content %}
+  
+
+
+	<div class="container">
+	
+		<div id="banner">
+		
+			<p>PIT i kawa?</p></br>
+			<p>Wypełnij PIT przy kawie</p>
+			<div id="action-button">
+				<a href="{{ url_for('panel') }}" title="Rozpocznij przepisywanie PITa" >
+					<input type="submit" value="Przepisz PIT">
+				</a>	
+			</div>
+			
+		</div> <!-- /banner -->
+
+		<div class="tille1">
+		
+			<h1>Dostałeś PIT-11 od pracodawcy, <span>a nie wiesz jak wypełnić deklarację podatkową PIT-37?</span></h1>
+			<p>Ta strona jest dla Ciebie! Jedynie co musisz zrobić to przepisać PIT.</p>
+			
+		</div> <!-- /tille1 -->
+		
+		<div class="tille2">
+		
+			<hr>
+		
+			<h2>Instrukcja:</h2>
+			<ol>
+				<li>Klikasz "Przepisz PIT" ↑</li>
+				<li>Wypełniasz podstawowe dane (ilość pitów, sposób rozliczenia, 1% oraz ulgi)</li>
+				<li>Klikasz "Dalej >>>"</li>
+				<li>Przepisujesz pit który dostałeś od pracodawcy
+					<ul>
+						<li>Pola z danymi osobowymi nie są wymagane, możesz je pominąć</li>
+					</ul>
+				</li>
+				<li>Klikasz "Dalej >>>"</li>
+				<li>Otrzymujesz wypełnony PIT-37
+					<ul>
+						<li>Samemu przepisujesz PIT na formularz i zdajesz go do urzędu skarbowego, albo</li>
+						<li>Wypełniasz i wysyłasz przez program e-deklaracje</li>
+					</ul>
+				</li>
+				<li>Cieszysz się wypełnionym pitem</li>
+			</ol>
+			
+			<hr>
+		
+		</div> <!-- /tille2 -->
+			
+	</div>	<!-- /container -->
+	
+	<div class="contact">
+		<div class="container">
+			
+			<div class="contact-form">
+				<h3 class="phone">Masz pytanie? <br>
+				Coś nie działa jak powinno?
+				</h3>
+				<p> Skontaktuj się ze mną mailowo →  <span>
+				<a href="mailto:pawels44@gmail.com">pawels44@gmail.com</a></span></p>
+			</div>
+
+		</div>
+	</div> <!-- /contact -->
+	
+	
+ 
+{% endblock %}

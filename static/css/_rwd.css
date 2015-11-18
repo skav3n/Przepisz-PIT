@@ -1,0 +1,17 @@
+@media (max-width: 939px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  header p {
+    display: none;
+  }
+  footer .copy,
+  footer ul {
+    float: none !important;
+    text-align: center !important;
+  }
+}
+
+/*# sourceMappingURL=_rwd.css.map */

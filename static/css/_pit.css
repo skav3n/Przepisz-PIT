@@ -1,0 +1,447 @@
+.grey {
+	background-color: grey;
+}
+.white {
+	background-color: white;
+}
+.one {
+	margin-top: 5px;
+	height: 40px;
+	border: solid;
+	border-width: 1px;
+	font-size: 12px;
+}
+.poltax {
+	width: 10%;
+	float: left;
+	font-size: 18px;
+	margin-top: 10px;
+}
+.poltax_two {
+	width: 90%;
+	float: left;
+	font-size: 12px;
+}
+.two {
+	height: 60px;
+	border-right: solid;
+	border-width: 1px;
+	font-size: 12px;
+}
+.input {
+	width: 100px;
+}
+.ide {
+	float: left; 
+	width: 60%;
+	border: solid;
+	border-width: 1px;
+	height: 60px;
+	padding: 5px;
+}
+.nr {
+	float: left; 
+	width: 15%;
+	border: solid;
+	border-width: 1px;
+	height: 60px;
+	padding: 5px;
+}
+.status {
+	float: left; 
+	width: 15%;
+	border: solid;
+	border-width: 1px;
+	height: 60px;
+	padding: 5px;
+}
+.three {
+	height: 105px;
+	font-size: 20px;
+	border-left: solid;
+	border-right: solid;
+	border-width: 1px;
+	padding: 5px;
+}
+.pit-11 {
+	float: left; 
+	width: 100%;
+	height: 20px;
+}
+.informacja {
+	width: 100%;
+}
+.w_roku {
+	width: 40%;
+	float: left;
+	margin-right: 10px;
+}
+.rok {
+	width: 10%;
+	float: left;
+	border: solid;
+	border-width: 1px;
+}
+.four {
+	border: solid;
+	border-width: 1px;
+	font-size: 12px;
+	height: 200px;
+	padding: 5px;
+}
+.podstawa {
+	float: left;
+	width: 20%;
+	height: 40px;
+}
+.podstawa_b {
+	float: right;
+	width: 80%;
+	height: 40px;
+}
+.skladajacy {
+	float: left;
+	width: 20%;
+	height: 20px;
+}
+.skladajacy_b {
+	float: right;
+	width: 80%;
+	height: 20px;
+}
+.termin {
+	float: left;
+	width: 20%;
+	height: 100px;
+}
+.termin_b {
+	float: right;
+	width: 80%;
+	height: 100px;
+}
+.otrzymuje {
+	float: left;
+	width: 20%;
+	height: 40px;
+}
+.otrzymuje_b {
+	float: right;
+	width: 80%;
+	height: 40px;
+}
+.five {
+	border: solid;
+	border-width: 1px;
+}
+.urzad5,
+.cel6 {
+	margin-left: 20px;
+	height: 40px;
+	font-size: 12px;
+	border-top: solid;
+	border-left: solid;
+	border-width: 1px;
+}
+.six {
+	border: solid;
+	border-width: 1px;
+}
+.rodzaj7,
+.nazwa8,
+.nazwisko9 {
+	margin-left: 20px;
+	height: 40px;
+	font-size: 12px;
+	border-top: solid;
+	border-left: solid;
+	border-width: 1px;
+}
+.seven {
+	border: solid;
+	border-width: 1px;
+}
+.identyfikator10 {
+	margin-left: 20px;
+	height: 40px;
+	font-size: 12px;
+	border-top: solid;
+	border-left: solid;
+	border-width: 1px;
+}
+.nid {
+	margin-left: 20px;
+	font-size: 12px;
+	height: 41px;
+}
+.nazwisko11 {
+	height: 40px;
+	border-top: solid;
+	border-left: solid;
+	border-width: 1px;
+	width: 325px;
+	float: left;
+}
+.imie12, 
+.data13 {
+	height: 40px;
+	border-top: solid;
+	border-left: solid;
+	border-width: 1px;
+	width: 295px;
+	float: left;
+}
+.kwp {
+	margin-left: 20px;
+	font-size: 12px;
+	height: 41px;
+}
+.kraj14 {
+	height: 40px;
+	border-top: solid;
+	border-left: solid;
+	border-width: 1px;
+	width: 200px;
+	float: left;
+}
+.wojewodztwo15 {
+	height: 40px;
+	border-top: solid;
+	border-left: solid;
+	border-width: 1px;
+	width: 405px;
+	float: left;
+}
+.powiat16 {
+	height: 40px;
+	border-top: solid;
+	border-left: solid;
+	border-width: 1px;
+	width: 310px;
+	float: left;
+}
+.gudl {
+	margin-left: 20px;
+	font-size: 12px;
+	height: 41px;	
+}
+.gmina17 {
+	height: 40px;
+	border-top: solid;
+	border-left: solid;
+	border-width: 1px;
+	width: 300px;
+	float: left;
+}
+.ulica18 {
+	height: 40px;
+	border-top: solid;
+	border-left: solid;
+	border-width: 1px;
+	width: 454px;
+	float: left;
+}
+.dom19, .lokal20 {
+	height: 40px;
+	border-top: solid;
+	border-left: solid;
+	border-width: 1px;
+	width: 80px;
+	float: left;
+}
+.mkp {
+	margin-left: 20px;
+	font-size: 12px;
+	height: 41px;	
+}
+.miejscowosc21, .poczta23 {
+	height: 40px;
+	border-top: solid;
+	border-left: solid;
+	border-width: 1px;
+	width: 350px;
+	float: left;
+}
+.kod22 {
+	height: 40px;
+	border-top: solid;
+	border-left: solid;
+	border-width: 1px;
+	width: 215px;
+	float: left;
+}
+.eight {
+	border: solid;
+	border-width: 1px;
+}
+.koszty24 {
+	margin-left: 20px;
+	border-top: solid;
+	border-left: solid;
+	border-width: 1px;
+	height: 60px;
+	font-size: 12px;
+}
+.nine {
+	border: solid;
+	border-width: 1px;
+}
+.zrodla {
+	margin-left: 20px;
+	margin-bottom: 5px;
+}
+.title {
+	text-align: center;
+}
+.a {
+	width: 40%;
+	font-size: 12px;
+}
+.b, .c, .d, .e, .f {
+	width: 12%;
+	font-size: 12px;
+}
+.skladki66_input,
+.skladki67_input,
+.skladki68_input,
+.skladki69_input {
+	width: 300px;
+	float: left;
+	height: 40px;
+	border-left: solid;
+	border-top: solid;
+	border-width: 1px;
+}
+.skladki {
+	height: 165px;
+	font-size: 12px;
+}
+.skladki66,
+.skladki68 {
+	margin-left: 20px;
+	width: 616px;
+	height: 40px;
+	border-left: solid;
+	border-top: solid;
+	border-width: 1px;
+	float: left;
+}
+.skladki67,
+.skladki69 {
+	margin-left: 40px;
+	width: 596px;
+	height: 40px;
+	border-left: solid;
+	border-top: solid;
+	border-width: 1px;
+	float: left;
+}
+.ten {
+	border: solid;
+	border-width: 1px;
+	height: 149px;
+}
+.przychody70a,
+.przychody71a {
+	margin-left: 20px;
+	width: 616px;
+	height: 40px;
+	border-left: solid;
+	border-top: solid;
+	border-width: 1px;
+	font-size: 12px;
+	float: left;
+}
+.przychody70b,
+.przychody71b {
+	width: 300px;
+	height: 40px;
+	border-left: solid;
+	border-top: solid;
+	border-width: 1px;
+	font-size: 12px;
+	float: left;
+}
+.informacja72 {
+	margin-left: 20px;
+	height: 40px;
+	width: 917px;
+	border-left: solid;
+	border-top: solid;
+	border-width: 1px;
+	font-size: 12px;
+	float: left;
+}
+.eleven {
+	border: solid;
+	border-width: 1px;
+	height: 67px;
+}
+.imie73 {
+	margin-left: 20px;
+	border-left: solid;
+	border-top: solid;
+	border-width: 1px;
+	font-size: 12px;
+	width: 280px;
+	height: 40px;
+	float: left;
+}
+.nazwisko74 {
+	border-left: solid;
+	border-top: solid;
+	border-width: 1px;
+	font-size: 12px;
+	width: 280px;
+	height: 40px;
+	float: left;
+}
+.podpis75 {
+	border-left: solid;
+	border-top: solid;
+	border-width: 1px;
+	font-size: 12px;
+	width: 355px;
+	height: 40px;
+	float: left;
+}
+.twelve {
+	border: solid;
+	border-width: 1px;
+	height: 108px;
+}
+.uwagi76 {
+	margin-left: 20px;
+	border-left: solid;
+	border-top: solid;
+	border-width: 1px;
+	font-size: 12px;
+	width: 917px;
+	height: 40px;
+	float: left;
+}
+.identyfikator77 {
+	margin-left: 20px;
+	border-left: solid;
+	border-top: solid;
+	border-width: 1px;
+	font-size: 12px;
+	width: 458px;
+	height: 40px;
+	float: left;
+}
+.podpis78 {
+	border-left: solid;
+	border-top: solid;
+	border-width: 1px;
+	font-size: 12px;
+	width: 458px;
+	height: 40px;
+	float: left;
+}
+.pouczenia {
+	font-size: 12px;
+	border: solid;
+	border-width: 1px;
+	padding: 5px;
+}
+

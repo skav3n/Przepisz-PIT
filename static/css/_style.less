@@ -1,0 +1,105 @@
+@import "_colors.less";
+
+/* ====================================
+        body and container
+====================================*/
+body {
+    background-color: @white;
+	color: @black;
+	font-family: 'Lato', sans-serif;
+	font-size: 18px;
+	margin: 0px;
+	padding: 5px;
+}
+.container {
+	width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* ====================================
+                Logo
+====================================*/
+
+header {
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	ol {
+		list-style-type: none;
+		li:nth-child(1) {
+			float: left;
+			height: 100px;
+			img {
+				width: 100px;
+				opacity: 0.75;
+			}
+			img:hover {
+				opacity: 1;
+				transition: 0.5s;
+			}
+		}
+		
+		li:nth-child(2) {
+			float: left;
+			height: 100px;
+			margin-left: 20px;
+			p {
+				text-align: center;
+				font-size: 23px;
+				font-weight: 700;
+				padding-top: 30px;
+			}
+		}
+	}
+}
+/* ====================================BUTTONS, INPUTS========= */
+
+.inputs {
+	text-align: left;
+}
+input[type="text"] {
+    width: 80%;
+    margin-left: 5px;
+}
+input[type="text"] {
+    background-color: #EEEEEE;
+}
+input[type="text"]:focus {
+    background-color: @orange;
+    color: white;
+}
+
+/* ====================================
+                Footer
+====================================*/
+footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 12px;
+    ul {
+        padding: 0px;
+        text-align: right;
+        font-weight: 700;
+        float: right;
+        li {
+            display: inline;
+            padding: 10px;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        opacity: 0.75;
+    }
+    a:hover {
+        transition: 0.5s;
+        color: @orange;
+        opacity: 1;
+    }
+    .copy {
+        padding-top: 10px;
+        float: left;
+    }
+}

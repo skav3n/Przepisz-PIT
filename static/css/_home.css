@@ -1,0 +1,81 @@
+/* ====================================
+                Banner
+====================================*/
+#banner {
+  background-image: url("../jpg/baner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 420px;
+}
+#banner p {
+  text-align: left;
+  display: inline;
+  position: relative;
+  top: 40%;
+  margin-left: 20px;
+  background-color: lightgrey;
+  padding: 10px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 50px;
+}
+#banner p:nth-child(3) {
+  font-size: 20px;
+}
+#banner #action-button {
+  text-align: center;
+  position: relative;
+  top: 50%;
+}
+#banner #action-button a {
+  text-decoration: none;
+}
+#banner #action-button input {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: #ff5722;
+  font-weight: 300;
+  font-size: 35px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+#banner #action-button input:hover {
+  background-color: #c73001;
+  transition: 0.5s;
+}
+/* ====================================
+                Content
+====================================*/
+.tille1 {
+  height: 100%;
+}
+.tille1 span {
+  font-size: 24px;
+}
+.tille2 {
+  height: 100%;
+  padding: 20px;
+}
+.tille2 ol {
+  line-height: 30px;
+}
+/* ====================================
+                Contact
+====================================*/
+.contact-form p span {
+  font-weight: 600;
+  opacity: 0.75;
+}
+.contact-form p span a {
+  text-decoration: none;
+  color: #ff5722;
+}
+.contact-form p span:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/*# sourceMappingURL=_home.css.map */

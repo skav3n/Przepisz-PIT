@@ -1,0 +1,101 @@
+#tabelka {
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+select {
+	width: 200px;
+	font-size: 16px;
+	margin: 5px;
+	padding: 5px;
+}
+#internet,
+#jeden-procent {
+	margin: 0;
+	width: 187px;
+	font-size: 16px;
+	margin: 5px;
+	padding: 5px;
+}
+#cel {
+	margin: 0;
+	width: 235px;
+	font-size: 16px;
+	margin: 5px;
+	padding: 5px;
+}
+fieldset {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background-color: white;
+}
+fieldset:hover {
+	background-color: #dbdbdb;
+}
+legend {
+	background-color: #F6F4E7;
+	font-size: 20px;
+	font-weight: 600;
+}
+a {
+   	text-decoration: none;
+}
+.button > input,
+.button > a > input {
+	color: white;
+	margin-top: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 50px;
+	padding-right: 50px;
+	background-color: #ff5722;
+	font-weight: 300;
+	font-size: 35px;
+	border: 1px solid white;
+	cursor: pointer;
+}
+.button > input:hover,
+.button > a > input:hover {
+ 	background-color: #c73001;
+ 	transition: 0.5s;
+ }
+#pit11numberOne,
+#pit11NumberTwo,
+#pit11NumberThree,
+#pit11NumberOneWife,
+#pit11NumberTwoWife, 
+#pit11NumberThreeWife,
+#buttonToAction {
+ 	display: none;
+}
+.frameOutside {
+	width: 50px;
+	height: 50px;
+	background-color: black;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float: left;
+	border: 2px solid;
+	font-size: 30px;
+	font-weight: 700;
+	text-align: center;
+}
+.frameOutside > .frameInside {
+	background-color: white;
+	margin: 5px;
+	width: 40px;
+	height: 40px;
+}
+.whosPit {
+	width: 150px;
+	height: 45px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float: left;
+	border-top: 2px solid;
+	border-right: 2px solid;
+	border-bottom: 2px solid;
+	font-size: 30px;
+	font-weight: 700;
+	padding-top: 5px;
+	text-align: center;
+}

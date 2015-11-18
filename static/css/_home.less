@@ -1,0 +1,94 @@
+@import "_colors.less";
+
+/* ====================================
+                Banner
+====================================*/
+
+#banner {
+	background-image: url("../jpg/baner.png");
+	background-repeat: no-repeat;
+	background-position: center;
+    height: 420px;
+    
+    p {
+        text-align: left; 
+        display: inline;
+        position: relative;
+        top: 40%;
+        padding: 10px;
+        margin-left: 20px;
+        background-color: lightgrey;
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 50px;
+    }
+    p:nth-child(3) {
+	  font-size: 20px;
+	}
+    #action-button {
+    	text-align: center;
+    	position: relative;
+    	top: 50%;
+    	a {
+    		text-decoration: none;
+    	}
+	    input {
+	    	color: white;
+	    	padding-top: 10px;
+	    	padding-bottom: 10px;
+	    	padding-left: 50px;
+	    	padding-right: 50px;
+	    	background-color: @orange;
+	    	font-weight: 300;
+	    	font-size: 35px;
+	    	border: 1px solid white;
+	    	cursor: pointer;
+	    }
+	 	input:hover {
+	 		background-color: #c73001;
+	 		transition: 0.5s;
+	 	}
+    }
+}
+
+/* ====================================
+                Content
+====================================*/
+.tille1 {
+    height: 100%;
+    span {
+    	font-size: 24px;
+    }
+}
+.tille2 {
+    height: 100%;
+    padding: 20px;
+    ol {
+    	line-height: 30px;
+    }
+}
+
+/* ====================================
+                Contact
+====================================*/
+.contact-form {
+	p {
+		span {
+			font-weight: 600;
+			opacity: 0.75;
+			a {
+				text-decoration: none;
+				color: @orange;
+			}
+		}
+		span:hover {
+			opacity: 1;
+			transition: 0.5s;
+		}
+	}
+}
+
+
+
+
+
