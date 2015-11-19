@@ -5,27 +5,35 @@
   background-image: url("../jpg/baner.png");
   background-repeat: no-repeat;
   background-position: center;
-  height: 420px;
+  height: 320px;
+  padding-top: 100px;
 }
-#banner p {
-  text-align: left;
-  display: inline;
-  position: relative;
-  top: 40%;
-  margin-left: 20px;
+#banner .banner-pit {
   background-color: lightgrey;
-  padding: 10px;
+  width: 200px;
+  margin-left: 20px;
+}
+#banner .banner-pit p {
+  padding: 5px;
+  text-align: center;
   font-size: 26px;
   font-weight: 700;
   line-height: 50px;
 }
-#banner p:nth-child(3) {
+#banner .banner-wypelnij {
+  background-color: lightgrey;
+  width: 275px;
+  margin-left: 20px;
+}
+#banner .banner-wypelnij p {
+  text-align: center;
+  padding: 5px;
   font-size: 20px;
+  font-weight: 700;
+  line-height: 50px;
 }
 #banner #action-button {
   text-align: center;
-  position: relative;
-  top: 50%;
 }
 #banner #action-button a {
   text-decoration: none;
