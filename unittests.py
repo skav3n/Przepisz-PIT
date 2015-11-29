@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import unittest
-from routes import replace
+from functions import replace
 
 class TestReplace(unittest.TestCase):
 

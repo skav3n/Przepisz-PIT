@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container">
-	<form method="post" action="{{ url_for('pit11') }}">
+	<form method="POST" action="{{ url_for('pit11') }}">
 		
 		<div id="tabelka">
 			
@@ -18,16 +18,17 @@
 			<fieldset>
 				<legend>Forma rozliczenia:</legend>
 				<select name="sposob" id="way" >
-					<option value="indywidualnie">Indywidualnie</option>
-					<option value="wspolnie">Wspólnie z małżonkiem</option>
-					<option value="wspolnie2">Wspólnie ze zmarłym małżonkiem</option>
-					<option value="samotnie">Osoba samotnie wychowująca dziecko</option>
+					<option value="1">Indywidualnie</option>
+					<option value="2">Wspólnie z małżonkiem</option>
+					<option value="3">Wspólnie ze zmarłym małżonkiem</option>
+					<option value="4">Osoba samotnie wychowująca dziecko</option>
 				</select>
 			</fieldset>
 			
 			<fieldset>
 				<legend>Ilość pitów-11 małżonka (MAX 3):</legend>
 				<select name="pit11_ilosc_m" id="numberPitsWife" >
+					<option value="-1">Wybierz ilość</option>
 					<option value="1">    1    </option>
 					<option value="2">    2    </option>
 					<option value="3">    3    </option>
@@ -46,8 +47,8 @@
 			<fieldset>
 				<legend><label for="internet">Internet (MAX 760 zł):</label></legend>
 				<select name="kto_internet" >
-					<option value="int_podatnik">Podatnik</option>
-					<option value="int_malzonek">Małżonek</option>
+					<option value="1">Podatnik</option>
+					<option value="2">Małżonek</option>
 				</select>
 				<br>
 				<input id="internet" type="text" name="internet" placeholder="Kwota" />
@@ -66,8 +67,8 @@
 				<fieldset>
 					<legend>Dziecko 1:</legend>
 					<select name="kto_dzieci_1" >
-						<option value="dz_podatnik">Podatnik</option>
-						<option value="dz_malzonek">Małżonek</option>
+						<option value="1">Podatnik</option>
+						<option value="2">Małżonek</option>
 					</select>
 					
 					<select name="ile_miesiecy_1" >
@@ -89,8 +90,8 @@
 				<fieldset>
 					<legend>Dziecko 2:</legend>
 					<select name="kto_dzieci_2" >
-						<option value="dz_podatnik">Podatnik</option>
-						<option value="dz_malzonek">Małżonek</option>
+						<option value="1">Podatnik</option>
+						<option value="2">Małżonek</option>
 					</select>
 					
 					<select name="ile_miesiecy_2" >
@@ -112,8 +113,8 @@
 				<fieldset>
 					<legend>Dziecko 3:</legend>
 					<select name="kto_dzieci_3" >
-						<option value="dz_podatnik">Podatnik</option>
-						<option value="dz_malzonek">Małżonek</option>
+						<option value="1">Podatnik</option>
+						<option value="2">Małżonek</option>
 					</select>
 					
 					<select name="ile_miesiecy_3" >
@@ -135,8 +136,8 @@
 				<fieldset>
 					<legend>Dziecko 4:</legend>
 					<select name="kto_dzieci_4" >
-						<option value="dz_podatnik">Podatnik</option>
-						<option value="dz_malzonek">Małżonek</option>
+						<option value="1">Podatnik</option>
+						<option value="2">Małżonek</option>
 					</select>
 					
 					<select name="ile_miesiecy_4" >
@@ -226,7 +227,7 @@
 				<div class="urzad5 white" align=left>5. Urząd skarbowy, do którego adresowana jest informacja
 					<div class="inputs">
 						<label for="urzad5"></label>
-						<input type="text" name="urzad5" />
+						<input type="text" name="urzad5" value=""/>
 					</div>
 				</div>
 				<div class="cel6 white" align=left>6. Cel złożenia formularza (zaznaczyć właściwy kwadrat):
@@ -249,26 +250,26 @@
 				<div class="identyfikator10 white">
 					10. Identyfikator podatkowy NIP / numer PESEL
 					<div class="inputs">
-						<input type="text" name="identyfikator10" maxlength="13" size="145"/>
+						<input type="text" name="identyfikator10" maxlength="13" size="145" value=""/>
 					</div>
 				</div>
 				<div class="nid">
 					<div class="nazwisko11 white">
 						11. Nazwisko
 						<div class="inputs">
-							<input type="text" name="nazwisko11" size="45"/>
+							<input type="text" name="nazwisko11" size="45" value=""/>
 						</div>
 					</div>
 					<div class="imie12 white">
 						12. Pierwsze imię
 						<div class="inputs">
-							<input type="text" name="imie12" size="40"/>
+							<input type="text" name="imie12" size="40" value=""/>
 						</div>
 					</div>
 					<div class="data13 white">
 						13. Data urodzenia (dzień-miesiąc-rok)
 						<div class="inputs">
-							<input type="text" name="data13" size="40"/>
+							<input type="text" name="data13" size="40" value=""/>
 						</div>
 					</div>
 				</div>
@@ -276,19 +277,19 @@
 					<div class="kraj14 white">
 						14. Kraj
 						<div class="inputs">
-							<input type="text" name="kraj14" size="25"/>
+							<input type="text" name="kraj14" size="25" value=""/>
 						</div>
 					</div>
 					<div class="wojewodztwo15 white">
 						15. Województwo
 						<div class="inputs">
-							<input type="text" name="wojewodztwo15" size="60"/>
+							<input type="text" name="wojewodztwo15" size="60" value=""/>
 						</div>
 					</div>
 					<div class="powiat16 white">
 						16. Powiat
 						<div class="inputs">
-							<input type="text" name="powiat16" size="45"/>
+							<input type="text" name="powiat16" size="45" value=""/>
 						</div>
 					</div>
 				</div>
@@ -296,25 +297,25 @@
 					<div class="gmina17 white">
 						17. Gmina
 						<div class="inputs">
-							<input type="text" name="gmina17" size="42"/>
+							<input type="text" name="gmina17" size="42" value=""/>
 						</div>
 					</div>
 					<div class="ulica18 white">
 						18. Ulica
 						<div class="inputs">
-							<input type="text" name="ulica18" size="67"/>
+							<input type="text" name="ulica18" size="67" value=""/>
 						</div>
 					</div>
 					<div class="dom19 white">
 						19. Nr domu
 						<div class="inputs">
-							<input type="text" name="dom19" size="5"/>
+							<input type="text" name="dom19" size="5" value=""/>
 						</div>
 					</div>
 					<div class="lokal20 white">
 						20. Nr lokalu
 						<div class="inputs">
-							<input type="text" name="lokal20" size="5"/>
+							<input type="text" name="lokal20" size="5" value=""/>
 						</div>
 					</div>
 				</div>
@@ -322,19 +323,19 @@
 					<div class="miejscowosc21 white">
 						21. Miejscowość
 						<div class="inputs">
-							<input type="text" name="miejscowosc21" size="50"/>
+							<input type="text" name="miejscowosc21" size="50" value=""/>
 						</div>
 					</div>
 					<div class="kod22 white">
 						22. Kod pocztowy
 						<div class="inputs">
-							<input type="text" name="kod22" size="28"/>
+							<input type="text" name="kod22" size="28" value=""/>
 						</div>
 					</div>
 					<div class="poczta23 white">
 						23. Poczta
 						<div class="inputs">
-							<input type="text" name="poczta23" size="50"/>
+							<input type="text" name="poczta23" size="50" value=""/>
 						</div>
 					</div>
 				</div>
@@ -380,31 +381,35 @@
 							<td class="b">
 								25.
 								<div class="inputs">
-									<input type="text" name="przychod25" size="10" value="0.00"/>
+									<input type="text" name="przychod25p0" size="10" value="0.00"/>
 								</div>
 							</td>
 							<td class="c">
 								26.
 								<div class="inputs">
-									<input type="text" name="przychod26" size="10" value="0.00"/>
+									<input type="text" name="koszt26p0" size="10" value="0.00"/>
 								</div>
 							</td>
 							<td class="d" rowspan="2">
 								27.
+								<!--
 								<div class="inputs">
-									<input type="text" name="przychod27" size="10" value="0.00"/>
+									<input type="text" name="przychod27p0" size="10" value="0.00"/>
 								</div>
+								-->
 							</td>
 							<td class="e" rowspan="2">
 								28.
+								<!--
 								<div class="inputs">
-									<input type="text" name="przychod28" size="10" value="0.00"/>
+									<input type="text" name="przychod28p0" size="10" value="0.00"/>
 								</div>
+								-->
 							</td>
 							<td class="f" rowspan="2">
 								29.
 								<div class="inputs">
-									<input type="text" name="przychod29" size="10" value="0.00"/>
+									<input type="text" name="zaliczka29p0" size="10" value="0.00"/>
 								</div>
 							</td>
 						</tr>
@@ -412,13 +417,13 @@
 							<td class="b">
 								30.
 								<div class="inputs">
-									<input type="text" name="przychod30" size="10" value="0.00"/>
+									<input type="text" name="przychod30p0" size="10" value="0.00"/>
 								</div>
 							</td>
 							<td class="c">
 								31.
 								<div class="inputs">
-									<input type="text" name="przychod31" size="10" value="0.00"/>
+									<input type="text" name="koszt31p0" size="10" value="0.00"/>
 								</div>
 							</td>
 						</tr>
@@ -432,21 +437,23 @@
 							<td class="b">
 								32.
 								<div class="inputs">
-									<input type="text" name="przychod32" size="10" value="0.00"/>
+									<input type="text" name="przychod32p0" size="10" value="0.00"/>
 								</div>
 							</td>
 							<td class="c grey" rowspan="4"></td>
 							<td class="d">
 								33.
+								<!--
 								<div class="inputs">
-									<input type="text" name="przychod33" size="10" value="0.00"/>
+									<input type="text" name="przychod33p0" size="10" value="0.00"/>
 								</div>
+								-->
 							</td>
 							<td class="e grey"></td>
 							<td class="f">
 								34.
 								<div class="inputs">
-									<input type="text" name="przychod34" size="10" value="0.00"/>
+									<input type="text" name="zaliczka34p0" size="10" value="0.00"/>
 								</div>
 							</td>
 						</tr>
@@ -455,25 +462,29 @@
 							<td class="b">
 								35.
 								<div class="inputs">
-									<input type="text" name="przychod35" size="10" value="0.00"/>
+									<input type="text" name="przychod35p0" size="10" value="0.00"/>
 								</div>
 							</td>
 							<td class="d">
 								36.
+								<!--
 								<div class="inputs">
-									<input type="text" name="przychod36" size="10" value="0.00"/>
+									<input type="text" name="przychod36p0" size="10" value="0.00"/>
 								</div>
+								-->
 							</td>
 							<td class="e">
 								37.
+								<!--
 								<div class="inputs">
-									<input type="text" name="przychod37" size="10" value="0.00"/>
+									<input type="text" name="przychod37p0" size="10" value="0.00"/>
 								</div>
+								-->
 							</td>
 							<td class="f">
 								38.
 								<div class="inputs">
-									<input type="text" name="przychod38" size="10" value="0.00"/>
+									<input type="text" name="zaliczka38p0" size="10" value="0.00"/>
 								</div>
 							</td>
 						</tr>
@@ -483,20 +494,22 @@
 							<td class="b">
 								39.
 								<div class="inputs">
-									<input type="text" name="przychod39" size="10" value="0.00"/>
+									<input type="text" name="przychod39p0" size="10" value="0.00"/>
 								</div>
 							</td>
 							<td class="d">
 								40.
+								<!--
 								<div class="inputs">
-									<input type="text" name="przychod40" size="10" value="0.00"/>
+									<input type="text" name="przychod40p0" size="10" value="0.00"/>
 								</div>
+								-->
 							</td>
 							<td class="e grey" rowspan="7"></td>
 							<td class="f">
 								41.
 								<div class="inputs">
-									<input type="text" name="przychod41" size="10" value="0.00"/>
+									<input type="text" name="zaliczka41p0" size="10" value="0.00"/>
 								</div>
 							</td>
 						</tr>
@@ -506,19 +519,21 @@
 							<td class="b">
 								42.
 								<div class="inputs">
-									<input type="text" name="przychod42" size="10" value="0.00"/>
+									<input type="text" name="przychod42p0" size="10" value="0.00"/>
 								</div>
 							</td>
 							<td class="d">
 								43.
+								<!--
 								<div class="inputs">
-									<input type="text" name="przychod43" size="10" value="0.00"/>
+									<input type="text" name="przychod43p0" size="10" value="0.00"/>
 								</div>
+								-->
 							</td>
 							<td class="f">
 								44.
 								<div class="inputs">
-									<input type="text" name="przychod44" size="10" value="0.00"/>
+									<input type="text" name="zaliczka44p0" size="10" value="0.00"/>
 								</div>
 							</td>
 						</tr>
@@ -530,25 +545,27 @@
 							<td class="b">
 								45.
 								<div class="inputs">
-									<input type="text" name="przychod45" size="10" value="0.00"/>
+									<input type="text" name="przychod45p0" size="10" value="0.00"/>
 								</div>
 							</td>
 							<td class="c">
 								46.
 								<div class="inputs">
-									<input type="text" name="przychod46" size="10" value="0.00"/>
+									<input type="text" name="koszt46p0" size="10" value="0.00"/>
 								</div>
 							</td>
 							<td class="d">
 								47.
+								<!--
 								<div class="inputs">
-									<input type="text" name="przychod47" size="10" value="0.00"/>
+									<input type="text" name="przychod47p0" size="10" value="0.00"/>
 								</div>
+								-->
 							</td>
 							<td class="f">
 								48.
 								<div class="inputs">
-									<input type="text" name="przychod48" size="10" value="0.00"/>
+									<input type="text" name="zaliczka48p0" size="10" value="0.00"/>
 								</div>
 							</td>
 						</tr>
@@ -559,25 +576,27 @@
 							<td class="b">
 								49.
 								<div class="inputs">
-									<input type="text" name="przychod49" size="10" value="0.00"/>
+									<input type="text" name="przychod49p0" size="10" value="0.00"/>
 								</div>
 							</td>
 							<td class="c">
 								50.
 								<div class="inputs">
-									<input type="text" name="przychod50" size="10" value="0.00"/>
+									<input type="text" name="koszt50p0" size="10" value="0.00"/>
 								</div>
 							</td>
 							<td class="d">
 								51.
+								<!--
 								<div class="inputs">
-									<input type="text" name="przychod51" size="10" value="0.00"/>
+									<input type="text" name="przychod51p0" size="10" value="0.00"/>
 								</div>
+								-->
 							</td>
 							<td class="f">
 								52.
 								<div class="inputs">
-									<input type="text" name="przychod52" size="10" value="0.00"/>
+									<input type="text" name="zaliczka52p0" size="10" value="0.00"/>
 								</div>
 							</td>
 						</tr>
@@ -590,20 +609,22 @@
 							<td class="b">
 								53.
 								<div class="inputs">
-									<input type="text" name="przychod53" size="10" value="0.00"/>
+									<input type="text" name="przychod53p0" size="10" value="0.00"/>
 								</div>
 							</td>
 							<td class="c grey"></td>
 							<td class="d" rowspan="2">
 								54.
+								<!--
 								<div class="inputs">
-									<input type="text" name="przychod54" size="10" value="0.00"/>
+									<input type="text" name="przychod54p0" size="10" value="0.00"/>
 								</div>
+								-->
 							</td>
 							<td class="f" rowspan="2">
 								55.
 								<div class="inputs">
-									<input type="text" name="przychod55" size="10" value="0.00"/>
+									<input type="text" name="zaliczka55p0" size="10" value="0.00"/>
 								</div>
 							</td>
 						</tr>
@@ -611,13 +632,13 @@
 							<td class="b">
 								56.
 								<div class="inputs">
-									<input type="text" name="przychod56" size="10" value="0.00"/>
+									<input type="text" name="przychod56p0" size="10" value="0.00"/>
 								</div>
 							</td>
 							<td class="c">
 								57.
 								<div class="inputs">
-									<input type="text" name="przychod57" size="10" value="0.00"/>
+									<input type="text" name="koszt57p0" size="10" value="0.00"/>
 								</div>
 							</td>
 						</tr>
@@ -626,25 +647,27 @@
 							<td class="b">
 								58.
 								<div class="inputs">
-									<input type="text" name="przychod58" size="10" value="0.00"/>
+									<input type="text" name="przychod58p0" size="10" value="0.00"/>
 								</div>
 							</td>
 							<td class="c">
 								59.
 								<div class="inputs">
-									<input type="text" name="przychod59" size="10" value="0.00"/>
+									<input type="text" name="koszt59p0" size="10" value="0.00"/>
 								</div>
 							</td>
 							<td class="d">
 								60.
+								<!--
 								<div class="inputs">
-									<input type="text" name="przychod60" size="10" value="0.00"/>
+									<input type="text" name="przychod60p0" size="10" value="0.00"/>
 								</div>
+								-->
 							</td>
 							<td class="f">
 							61.
 								<div class="inputs">
-									<input type="text" name="przychod61" size="10" value="0.00"/>
+									<input type="text" name="zaliczka61p0" size="10" value="0.00"/>
 								</div>
 							</td>
 						</tr>
@@ -653,26 +676,30 @@
 							<td class="b">
 								62.
 								<div class="inputs">
-									<input type="text" name="przychod62" size="10" value="0.00"/>
+									<input type="text" name="przychod62p0" size="10" value="0.00"/>
 								</div>
 							</td>
 							<td class="c grey"></td>
 							<td class="d">
 								63.
+								<!--
 								<div class="inputs">
-									<input type="text" name="przychod63" size="10" value="0.00"/>
+									<input type="text" name="przychod63p0" size="10" value="0.00"/>
 								</div>
+								-->
 							</td>
 							<td class="e">
 								64.
+								<!--
 								<div class="inputs">
-									<input type="text" name="przychod64" size="10" value="0.00"/>
+									<input type="text" name="przychod64p0" size="10" value="0.00"/>
 								</div>
+								-->
 							</td>
 							<td class="f">
 								65.
 								<div class="inputs">
-									<input type="text" name="przychod65" size="10" value="0.00"/>
+									<input type="text" name="zaliczka65p0" size="10" value="0.00"/>
 								</div>
 							</td>
 						</tr>
@@ -684,30 +711,34 @@
 					<div class="skladki66_input white">
 						66.
 						<div class="inputs">
-							<input type="text" name="skladki66" size="40" value="0.00"/>
+							<input type="text" name="skladki66p0" size="40" value="0.00"/>
 						</div>
 					</div>
 					<div class="skladki67 white">w tym zagraniczne, o których mowa w art. 26 ust. 1 pkt 2a ustawy</div>
 					<div class="skladki67_input white">
 						67.
+						<!--
 						<div class="inputs">
-							<input type="text" name="skladki67" size="40" value="0.00"/>
+							<input type="text" name="skladki67p0" size="40" value="0.00"/>
 						</div>
+						-->
 					</div>
 					<div class="skladki68 white">Składki na ubezpieczenie zdrowotne, o których mowa w przepisach ustawy, 
 					podlegające odliczeniu od podatku</div>
 					<div class="skladki68_input white">
 						68.
 						<div class="inputs">
-							<input type="text" name="zdrowotna68" size="40" value="0.00"/>
+							<input type="text" name="zdrowotna68p0" size="40" value="0.00"/>
 						</div>
 					</div>
 					<div class="skladki69 white">w tym zagraniczne, o których mowa w art. 26 ust. 1 pkt 2a ustawy</div>
 					<div class="skladki69_input white">
 						69.
+						<!--
 						<div class="inputs">
-							<input type="text" name="zdrowotna69" size="40" value="0.00"/>
+							<input type="text" name="zdrowotna69p0" size="40" value="0.00"/>
 						</div>
+						-->
 					</div>
 				</div>
 			</div>
@@ -782,370 +813,400 @@
 				<div style="clear: both;"></div>
 			
 				<div class="nine grey">
-					E. DOCHODY PODATNIKA, POBRANE ZALICZKI ORAZ POBRANE SKŁADKI 6)  :(
-						<div class="zrodla white">
-							<table border="1" style="width:100%">
-								<tr class="title">
-									<td class="a">Źródła przychodów</td>
-									<td class="b">Przychód 4)</td>
-									<td class="c">Koszty uzyskania przychodów 5)</td>
-									<td class="d">Dochód (b - c)</td>
-									<td class="e">Dochód zwolniony od podatków 4)</td>
-									<td class="f">Zaliczka pobrana przez płatnika</td>
-								</tr>
-								<tr class="title">
-									<td class="a">a</td>
-									<td class="b">b</td>
-									<td class="c">c</td>
-									<td class="d">d</td>
-									<td class="e">e</td>
-									<td class="f">f</td>
-								</tr>
-								<tr>
-									<td class="a" rowspan="2"><b>1. Należności ze stosunku: pracy, służbowego,
-										 spółdzielczego i z pracy nakładczej, a także 
-										 zasiłki pieniężne z ubezpieczenia społecznego
-										 wypłacone przez zakład pracy, o którym mowa
-										 w art. 31 ustawy, oraz płatników, o których
-										 mowa w art. 42e ust. 1 ustawy </b><br>
-										 W poz. 30 należy wykazać przychody, do których
-										 zastosowano odliczenie kosztów uzyskania
-										  przychodów na podstawie art. 22 ust. 9 pkt 3 ustawy.
-									</td>
-									<td class="b">
-										25.
-										<div class="inputs">
-											<input type="text" name="przychod25b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="c">
-										26.
-										<div class="inputs">
-											<input type="text" name="przychod26b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="d" rowspan="2">
-										27.
-										<div class="inputs">
-											<input type="text" name="przychod27b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="e" rowspan="2">
-										28.
-										<div class="inputs">
-											<input type="text" name="przychod28b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="f" rowspan="2">
-										29.
-										<div class="inputs">
-											<input type="text" name="przychod29b" size="10" value="0.00"/>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="b">
-										30.
-										<div class="inputs">
-											<input type="text" name="przychod30b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="c">
-										31.
-										<div class="inputs">
-											<input type="text" name="przychod31b" size="10" value="0.00"/>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="a">
-										 2. Należności z tytułu członkostwa w rolnicze
-										 spółdzielni produkcyjnej lub innej spółdzielni
-										 zajmującej się produkcją rolną oraz zasiłki
-										 pieniężne z ubezpieczenia społecznego
-										 </td>
-									<td class="b">
-										32.
-										<div class="inputs">
-											<input type="text" name="przychod32b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="c grey" rowspan="4"></td>
-									<td class="d">
-										33.
-										<div class="inputs">
-											<input type="text" name="przychod33b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="e grey"></td>
-									<td class="f">
-										34.
-										<div class="inputs">
-											<input type="text" name="przychod34b" size="10" value="0.00"/>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="a">3. Emerytury – renty zagraniczne</td>
-									<td class="b">
-										35.
-										<div class="inputs">
-											<input type="text" name="przychod35b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="d">
-										36.
-										<div class="inputs">
-											<input type="text" name="przychod36b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="e">
-										37.
-										<div class="inputs">
-											<input type="text" name="przychod37b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="f">
-										38.
-										<div class="inputs">
-											<input type="text" name="przychod38b" size="10" value="0.00"/>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="a"> 4. Należności za pracę przypadające tymczasowo
-									aresztowanym lub skazanym</td>
-									<td class="b">
-										39.
-										<div class="inputs">
-											<input type="text" name="przychod39b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="d">
-										40.
-										<div class="inputs">
-											<input type="text" name="przychod40b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="e grey" rowspan="7"></td>
-									<td class="f">
-										41.
-										<div class="inputs">
-											<input type="text" name="przychod41b" size="10" value="0.00"/>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="a"> 5. Świadczenia wypłacone z Funduszów:
-									 Pracy i Gwarantowanych Świadczeń Pracowniczych</td>
-									<td class="b">
-										42.
-										<div class="inputs">
-											<input type="text" name="przychod42b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="d">
-										43.
-										<div class="inputs">
-											<input type="text" name="przychod43b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="f">
-										44.
-										<div class="inputs">
-											<input type="text" name="przychod44b" size="10" value="0.00"/>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="a"> 6. Działalność wykonywana osobiście, o której
-									 mowa w art. 13 pkt 2, 4, 6 (z wyjątkiem
-									 czynności wymienionych w wierszu 7) i 7-9
-									  ustawy, w tym umowy zlecenia i o dzieło</td>
-									<td class="b">
-										45.
-										<div class="inputs">
-											<input type="text" name="przychod45b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="c">
-										46.
-										<div class="inputs">
-											<input type="text" name="przychod46b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="d">
-										47.
-										<div class="inputs">
-											<input type="text" name="przychod47b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="f">
-										48.
-										<div class="inputs">
-											<input type="text" name="przychod48b" size="10" value="0.00"/>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="a"> 7. Czynności związane z pełnieniem obowiązków
-									 społecznych lub obywatelskich (art. 13 pkt 5 i 6
-									 ustawy) - Należy wpisać kwotę wynikającą z PIT-R.</td>
-									<td class="b">
-										49.
-										<div class="inputs">
-											<input type="text" name="przychod49b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="c">
-										50.
-										<div class="inputs">
-											<input type="text" name="przychod50b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="d">
-										51.
-										<div class="inputs">
-											<input type="text" name="przychod51b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="f">
-										52.
-										<div class="inputs">
-											<input type="text" name="przychod52b" size="10" value="0.00"/>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="a" rowspan="2"><b>8. Prawa autorskie i inne prawa, o których mowa 
-									 w art. 18 ustawy</b> <br>
-									 W poz. 56 należy wykazać przychody, do których 
-									 zastosowano koszty uzyskania przychodów na
-									 podstawie art. 22 ust. 9 pkt 1-3 ustawy.</td>
-									<td class="b">
-										53.
-										<div class="inputs">
-											<input type="text" name="przychod53b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="c grey"></td>
-									<td class="d" rowspan="2">
-										54.
-										<div class="inputs">
-											<input type="text" name="przychod54b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="f" rowspan="2">
-										55.
-										<div class="inputs">
-											<input type="text" name="przychod55b" size="10" value="0.00"/>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="b">
-										56.
-										<div class="inputs">
-											<input type="text" name="przychod56b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="c">
-										57.
-										<div class="inputs">
-											<input type="text" name="przychod57b" size="10" value="0.00"/>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="a"> 9. Należności wynikające z umowy aktywizacyjnej</td>
-									<td class="b">
-										58.
-										<div class="inputs">
-											<input type="text" name="przychod58b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="c">
-										59.
-										<div class="inputs">
-											<input type="text" name="przychod59b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="d">
-										60.
-										<div class="inputs">
-											<input type="text" name="przychod60b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="f">
-									61.
-										<div class="inputs">
-											<input type="text" name="przychod61b" size="10" value="0.00"/>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td class="a"> 10. Inne źródła</td>
-									<td class="b">
-										62.
-										<div class="inputs">
-											<input type="text" name="przychod62b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="c grey"></td>
-									<td class="d">
-										63.
-										<div class="inputs">
-											<input type="text" name="przychod63b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="e">
-										64.
-										<div class="inputs">
-											<input type="text" name="przychod64b" size="10" value="0.00"/>
-										</div>
-									</td>
-									<td class="f">
-										65.
-										<div class="inputs">
-											<input type="text" name="przychod65b" size="10" value="0.00"/>
-										</div>
-									</td>
-								</tr>
-							</table>
+				E. DOCHODY PODATNIKA, POBRANE ZALICZKI ORAZ POBRANE SKŁADKI 6)
+					<div class="zrodla white">
+						<table border="1" style="width:100%">
+							<tr class="title">
+								<td class="a">Źródła przychodów</td>
+								<td class="b">Przychód 4)</td>
+								<td class="c">Koszty uzyskania przychodów 5)</td>
+								<td class="d">Dochód (b - c)</td>
+								<td class="e">Dochód zwolniony od podatków 4)</td>
+								<td class="f">Zaliczka pobrana przez płatnika</td>
+							</tr>
+							<tr class="title">
+								<td class="a">a</td>
+								<td class="b">b</td>
+								<td class="c">c</td>
+								<td class="d">d</td>
+								<td class="e">e</td>
+								<td class="f">f</td>
+							</tr>
+							<tr>
+								<td class="a" rowspan="2"><b>1. Należności ze stosunku: pracy, służbowego,
+									 spółdzielczego i z pracy nakładczej, a także 
+									 zasiłki pieniężne z ubezpieczenia społecznego
+									 wypłacone przez zakład pracy, o którym mowa
+									 w art. 31 ustawy, oraz płatników, o których
+									 mowa w art. 42e ust. 1 ustawy </b><br>
+									 W poz. 30 należy wykazać przychody, do których
+									 zastosowano odliczenie kosztów uzyskania
+									  przychodów na podstawie art. 22 ust. 9 pkt 3 ustawy.
+								</td>
+								<td class="b">
+									25.
+									<div class="inputs">
+										<input type="text" name="przychod25p1" size="10" value="0.00"/>
+									</div>
+								</td>
+								<td class="c">
+									26.
+									<div class="inputs">
+										<input type="text" name="koszt26p1" size="10" value="0.00"/>
+									</div>
+								</td>
+								<td class="d" rowspan="2">
+									27.
+									<!--
+									<div class="inputs">
+										<input type="text" name="przychod27p1" size="10" value="0.00"/>
+									</div>
+									-->
+								</td>
+								<td class="e" rowspan="2">
+									28.
+									<!--
+									<div class="inputs">
+										<input type="text" name="przychod28p1" size="10" value="0.00"/>
+									</div>
+									-->
+								</td>
+								<td class="f" rowspan="2">
+									29.
+									<div class="inputs">
+										<input type="text" name="zaliczka29p1" size="10" value="0.00"/>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="b">
+									30.
+									<div class="inputs">
+										<input type="text" name="przychod30p1" size="10" value="0.00"/>
+									</div>
+								</td>
+								<td class="c">
+									31.
+									<div class="inputs">
+										<input type="text" name="koszt31p1" size="10" value="0.00"/>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="a">
+									 2. Należności z tytułu członkostwa w rolnicze
+									 spółdzielni produkcyjnej lub innej spółdzielni
+									 zajmującej się produkcją rolną oraz zasiłki
+									 pieniężne z ubezpieczenia społecznego
+									 </td>
+								<td class="b">
+									32.
+									<div class="inputs">
+										<input type="text" name="przychod32p1" size="10" value="0.00"/>
+									</div>
+								</td>
+								<td class="c grey" rowspan="4"></td>
+								<td class="d">
+									33.
+									<!--
+									<div class="inputs">
+										<input type="text" name="przychod33p1" size="10" value="0.00"/>
+									</div>
+									-->
+								</td>
+								<td class="e grey"></td>
+								<td class="f">
+									34.
+									<div class="inputs">
+										<input type="text" name="zaliczka34p1" size="10" value="0.00"/>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="a">3. Emerytury – renty zagraniczne</td>
+								<td class="b">
+									35.
+									<div class="inputs">
+										<input type="text" name="przychod35p1" size="10" value="0.00"/>
+									</div>
+								</td>
+								<td class="d">
+									36.
+									<!--
+									<div class="inputs">
+										<input type="text" name="przychod36p1" size="10" value="0.00"/>
+									</div>
+									-->
+								</td>
+								<td class="e">
+									37.
+									<!--
+									<div class="inputs">
+										<input type="text" name="przychod37p1" size="10" value="0.00"/>
+									</div>
+									-->
+								</td>
+								<td class="f">
+									38.
+									<div class="inputs">
+										<input type="text" name="zaliczka38p1" size="10" value="0.00"/>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="a"> 4. Należności za pracę przypadające tymczasowo
+								aresztowanym lub skazanym</td>
+								<td class="b">
+									39.
+									<div class="inputs">
+										<input type="text" name="przychod39p1" size="10" value="0.00"/>
+									</div>
+								</td>
+								<td class="d">
+									40.
+									<!--
+									<div class="inputs">
+										<input type="text" name="przychod40p1" size="10" value="0.00"/>
+									</div>
+									-->
+								</td>
+								<td class="e grey" rowspan="7"></td>
+								<td class="f">
+									41.
+									<div class="inputs">
+										<input type="text" name="zaliczka41p1" size="10" value="0.00"/>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="a"> 5. Świadczenia wypłacone z Funduszów:
+								 Pracy i Gwarantowanych Świadczeń Pracowniczych</td>
+								<td class="b">
+									42.
+									<div class="inputs">
+										<input type="text" name="przychod42p1" size="10" value="0.00"/>
+									</div>
+								</td>
+								<td class="d">
+									43.
+									<!--
+									<div class="inputs">
+										<input type="text" name="przychod43p1" size="10" value="0.00"/>
+									</div>
+									-->
+								</td>
+								<td class="f">
+									44.
+									<div class="inputs">
+										<input type="text" name="zaliczka44p1" size="10" value="0.00"/>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="a"> 6. Działalność wykonywana osobiście, o której
+								 mowa w art. 13 pkt 2, 4, 6 (z wyjątkiem
+								 czynności wymienionych w wierszu 7) i 7-9
+								  ustawy, w tym umowy zlecenia i o dzieło</td>
+								<td class="b">
+									45.
+									<div class="inputs">
+										<input type="text" name="przychod45p1" size="10" value="0.00"/>
+									</div>
+								</td>
+								<td class="c">
+									46.
+									<div class="inputs">
+										<input type="text" name="koszt46p1" size="10" value="0.00"/>
+									</div>
+								</td>
+								<td class="d">
+									47.
+									<!--
+									<div class="inputs">
+										<input type="text" name="przychod47p1" size="10" value="0.00"/>
+									</div>
+									-->
+								</td>
+								<td class="f">
+									48.
+									<div class="inputs">
+										<input type="text" name="zaliczka48p1" size="10" value="0.00"/>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="a"> 7. Czynności związane z pełnieniem obowiązków
+								 społecznych lub obywatelskich (art. 13 pkt 5 i 6
+								 ustawy) - Należy wpisać kwotę wynikającą z PIT-R.</td>
+								<td class="b">
+									49.
+									<div class="inputs">
+										<input type="text" name="przychod49p1" size="10" value="0.00"/>
+									</div>
+								</td>
+								<td class="c">
+									50.
+									<div class="inputs">
+										<input type="text" name="koszt50p1" size="10" value="0.00"/>
+									</div>
+								</td>
+								<td class="d">
+									51.
+									<!--
+									<div class="inputs">
+										<input type="text" name="przychod51p1" size="10" value="0.00"/>
+									</div>
+									-->
+								</td>
+								<td class="f">
+									52.
+									<div class="inputs">
+										<input type="text" name="zaliczka52p1" size="10" value="0.00"/>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="a" rowspan="2"><b>8. Prawa autorskie i inne prawa, o których mowa 
+								 w art. 18 ustawy</b> <br>
+								 W poz. 56 należy wykazać przychody, do których 
+								 zastosowano koszty uzyskania przychodów na
+								 podstawie art. 22 ust. 9 pkt 1-3 ustawy.</td>
+								<td class="b">
+									53.
+									<div class="inputs">
+										<input type="text" name="przychod53p1" size="10" value="0.00"/>
+									</div>
+								</td>
+								<td class="c grey"></td>
+								<td class="d" rowspan="2">
+									54.
+									<!--
+									<div class="inputs">
+										<input type="text" name="przychod54p1" size="10" value="0.00"/>
+									</div>
+									-->
+								</td>
+								<td class="f" rowspan="2">
+									55.
+									<div class="inputs">
+										<input type="text" name="zaliczka55p1" size="10" value="0.00"/>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="b">
+									56.
+									<div class="inputs">
+										<input type="text" name="przychod56p1" size="10" value="0.00"/>
+									</div>
+								</td>
+								<td class="c">
+									57.
+									<div class="inputs">
+										<input type="text" name="koszt57p1" size="10" value="0.00"/>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="a"> 9. Należności wynikające z umowy aktywizacyjnej</td>
+								<td class="b">
+									58.
+									<div class="inputs">
+										<input type="text" name="przychod58p1" size="10" value="0.00"/>
+									</div>
+								</td>
+								<td class="c">
+									59.
+									<div class="inputs">
+										<input type="text" name="koszt59p1" size="10" value="0.00"/>
+									</div>
+								</td>
+								<td class="d">
+									60.
+									<!--
+									<div class="inputs">
+										<input type="text" name="przychod60p1" size="10" value="0.00"/>
+									</div>
+									-->
+								</td>
+								<td class="f">
+								61.
+									<div class="inputs">
+										<input type="text" name="zaliczka61p1" size="10" value="0.00"/>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="a"> 10. Inne źródła</td>
+								<td class="b">
+									62.
+									<div class="inputs">
+										<input type="text" name="przychod62p1" size="10" value="0.00"/>
+									</div>
+								</td>
+								<td class="c grey"></td>
+								<td class="d">
+									63.
+									<!--
+									<div class="inputs">
+										<input type="text" name="przychod63p1" size="10" value="0.00"/>
+									</div>
+									-->
+								</td>
+								<td class="e">
+									64.
+									<!--
+									<div class="inputs">
+										<input type="text" name="przychod64p1" size="10" value="0.00"/>
+									</div>
+									-->
+								</td>
+								<td class="f">
+									65.
+									<div class="inputs">
+										<input type="text" name="zaliczka65p1" size="10" value="0.00"/>
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="skladki">
+						<div class="skladki66 white"> Składki na ubezpieczenia społeczne, o których mowa w przepisach ustawy, 
+						podlegające odliczeniu od dochodu</div>
+						<div class="skladki66_input white">
+							66.
+							<div class="inputs">
+								<input type="text" name="skladki66p1" size="40" value="0.00"/>
+							</div>
 						</div>
-						<div class="skladki">
-							<div class="skladki66 white"> Składki na ubezpieczenia społeczne, o których mowa w przepisach ustawy, 
-							podlegające odliczeniu od dochodu</div>
-							<div class="skladki66_input white">
-								66.
-								<div class="inputs">
-									<input type="text" name="skladki66b" size="40" value="0.00"/>
-								</div>
+						<div class="skladki67 white">w tym zagraniczne, o których mowa w art. 26 ust. 1 pkt 2a ustawy</div>
+						<div class="skladki67_input white">
+							67.
+							<!--
+							<div class="inputs">
+								<input type="text" name="skladki67p1" size="40" value="0.00"/>
 							</div>
-							<div class="skladki67 white">w tym zagraniczne, o których mowa w art. 26 ust. 1 pkt 2a ustawy</div>
-							<div class="skladki67_input white">
-								67.
-								<div class="inputs">
-									<input type="text" name="skladki67b" size="40" value="0.00"/>
-								</div>
+							-->
+						</div>
+						<div class="skladki68 white">Składki na ubezpieczenie zdrowotne, o których mowa w przepisach ustawy, 
+						podlegające odliczeniu od podatku</div>
+						<div class="skladki68_input white">
+							68.
+							<div class="inputs">
+								<input type="text" name="zdrowotna68p1" size="40" value="0.00"/>
 							</div>
-							<div class="skladki68 white">Składki na ubezpieczenie zdrowotne, o których mowa w przepisach ustawy, 
-							podlegające odliczeniu od podatku</div>
-							<div class="skladki68_input white">
-								68.
-								<div class="inputs">
-									<input type="text" name="zdrowotna68b" size="40" value="0.00"/>
-								</div>
+						</div>
+						<div class="skladki69 white">w tym zagraniczne, o których mowa w art. 26 ust. 1 pkt 2a ustawy</div>
+						<div class="skladki69_input white">
+							69.
+							<!--
+							<div class="inputs">
+								<input type="text" name="zdrowotna69p1" size="40" value="0.00"/>
 							</div>
-							<div class="skladki69 white">w tym zagraniczne, o których mowa w art. 26 ust. 1 pkt 2a ustawy</div>
-							<div class="skladki69_input white">
-								69.
-								<div class="inputs">
-									<input type="text" name="zdrowotna69b" size="40" value="0.00"/>
-								</div>
-							</div>
+							-->
 						</div>
 					</div>
+				</div>
 					<br>
 			</div>
 			<!-- /pit11NumberTwo -->
@@ -1190,31 +1251,35 @@
 								<td class="b">
 									25.
 									<div class="inputs">
-										<input type="text" name="przychod25c" size="10" value="0.00"/>
+										<input type="text" name="przychod25p2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									26.
 									<div class="inputs">
-										<input type="text" name="przychod26c" size="10" value="0.00"/>
+										<input type="text" name="koszt26p2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d" rowspan="2">
 									27.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod27c" size="10" value="0.00"/>
+										<input type="text" name="przychod27p2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e" rowspan="2">
 									28.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod28c" size="10" value="0.00"/>
+										<input type="text" name="przychod28p2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f" rowspan="2">
 									29.
 									<div class="inputs">
-										<input type="text" name="przychod29c" size="10" value="0.00"/>
+										<input type="text" name="zaliczka29p2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1222,13 +1287,13 @@
 								<td class="b">
 									30.
 									<div class="inputs">
-										<input type="text" name="przychod30c" size="10" value="0.00"/>
+										<input type="text" name="przychod30p2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									31.
 									<div class="inputs">
-										<input type="text" name="przychod31c" size="10" value="0.00"/>
+										<input type="text" name="koszt31p2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1242,21 +1307,23 @@
 								<td class="b">
 									32.
 									<div class="inputs">
-										<input type="text" name="przychod32c" size="10" value="0.00"/>
+										<input type="text" name="przychod32p2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c grey" rowspan="4"></td>
 								<td class="d">
 									33.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod33c" size="10" value="0.00"/>
+										<input type="text" name="przychod33p2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e grey"></td>
 								<td class="f">
 									34.
 									<div class="inputs">
-										<input type="text" name="przychod34c" size="10" value="0.00"/>
+										<input type="text" name="zaliczka34p2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1265,25 +1332,29 @@
 								<td class="b">
 									35.
 									<div class="inputs">
-										<input type="text" name="przychod35c" size="10" value="0.00"/>
+										<input type="text" name="przychod35p2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									36.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod36c" size="10" value="0.00"/>
+										<input type="text" name="przychod36p2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e">
 									37.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod37c" size="10" value="0.00"/>
+										<input type="text" name="przychod37p2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									38.
 									<div class="inputs">
-										<input type="text" name="przychod38c" size="10" value="0.00"/>
+										<input type="text" name="zaliczka38p2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1293,20 +1364,22 @@
 								<td class="b">
 									39.
 									<div class="inputs">
-										<input type="text" name="przychod39c" size="10" value="0.00"/>
+										<input type="text" name="przychod39p2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									40.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod40c" size="10" value="0.00"/>
+										<input type="text" name="przychod40p2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e grey" rowspan="7"></td>
 								<td class="f">
 									41.
 									<div class="inputs">
-										<input type="text" name="przychod41c" size="10" value="0.00"/>
+										<input type="text" name="zaliczka41p2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1316,19 +1389,21 @@
 								<td class="b">
 									42.
 									<div class="inputs">
-										<input type="text" name="przychod42c" size="10" value="0.00"/>
+										<input type="text" name="przychod42p2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									43.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod43c" size="10" value="0.00"/>
+										<input type="text" name="przychod43p2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									44.
 									<div class="inputs">
-										<input type="text" name="przychod44c" size="10" value="0.00"/>
+										<input type="text" name="zaliczka44p2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1340,25 +1415,27 @@
 								<td class="b">
 									45.
 									<div class="inputs">
-										<input type="text" name="przychod45c" size="10" value="0.00"/>
+										<input type="text" name="przychod45p2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									46.
 									<div class="inputs">
-										<input type="text" name="przychod46c" size="10" value="0.00"/>
+										<input type="text" name="koszt46p2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									47.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod47c" size="10" value="0.00"/>
+										<input type="text" name="przychod47p2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									48.
 									<div class="inputs">
-										<input type="text" name="przychod48c" size="10" value="0.00"/>
+										<input type="text" name="zaliczka48p2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1369,25 +1446,27 @@
 								<td class="b">
 									49.
 									<div class="inputs">
-										<input type="text" name="przychod49c" size="10" value="0.00"/>
+										<input type="text" name="przychod49p2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									50.
 									<div class="inputs">
-										<input type="text" name="przychod50c" size="10" value="0.00"/>
+										<input type="text" name="koszt50p2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									51.
+									<!--
 									<div class="inputs">
 										<input type="text" name="przychod51c" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									52.
 									<div class="inputs">
-										<input type="text" name="przychod52c" size="10" value="0.00"/>
+										<input type="text" name="zaliczka52p2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1400,20 +1479,22 @@
 								<td class="b">
 									53.
 									<div class="inputs">
-										<input type="text" name="przychod53c" size="10" value="0.00"/>
+										<input type="text" name="przychod53p2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c grey"></td>
 								<td class="d" rowspan="2">
 									54.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod54c" size="10" value="0.00"/>
+										<input type="text" name="przychod54p2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f" rowspan="2">
 									55.
 									<div class="inputs">
-										<input type="text" name="przychod55c" size="10" value="0.00"/>
+										<input type="text" name="zaliczka55p2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1421,13 +1502,13 @@
 								<td class="b">
 									56.
 									<div class="inputs">
-										<input type="text" name="przychod56c" size="10" value="0.00"/>
+										<input type="text" name="przychod56p2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									57.
 									<div class="inputs">
-										<input type="text" name="przychod57c" size="10" value="0.00"/>
+										<input type="text" name="koszt57p2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1436,25 +1517,27 @@
 								<td class="b">
 									58.
 									<div class="inputs">
-										<input type="text" name="przychod58c" size="10" value="0.00"/>
+										<input type="text" name="przychod58p2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									59.
 									<div class="inputs">
-										<input type="text" name="przychod59c" size="10" value="0.00"/>
+										<input type="text" name="koszt59p2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									60.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod60c" size="10" value="0.00"/>
+										<input type="text" name="przychod60p2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 								61.
 									<div class="inputs">
-										<input type="text" name="przychod61c" size="10" value="0.00"/>
+										<input type="text" name="zaliczka61p2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1463,26 +1546,30 @@
 								<td class="b">
 									62.
 									<div class="inputs">
-										<input type="text" name="przychod62c" size="10" value="0.00"/>
+										<input type="text" name="przychod62p2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c grey"></td>
 								<td class="d">
 									63.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod63c" size="10" value="0.00"/>
+										<input type="text" name="przychod63p2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e">
 									64.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod64c" size="10" value="0.00"/>
+										<input type="text" name="przychod64p2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									65.
 									<div class="inputs">
-										<input type="text" name="przychod65c" size="10" value="0.00"/>
+										<input type="text" name="zaliczka65p2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1494,30 +1581,34 @@
 						<div class="skladki66_input white">
 							66.
 							<div class="inputs">
-								<input type="text" name="skladki66c" size="40" value="0.00"/>
+								<input type="text" name="skladki66p2" size="40" value="0.00"/>
 							</div>
 						</div>
 						<div class="skladki67 white">w tym zagraniczne, o których mowa w art. 26 ust. 1 pkt 2a ustawy</div>
 						<div class="skladki67_input white">
 							67.
+							<!--
 							<div class="inputs">
-								<input type="text" name="skladki67c" size="40" value="0.00"/>
+								<input type="text" name="skladki67p2" size="40" value="0.00"/>
 							</div>
+							-->
 						</div>
 						<div class="skladki68 white">Składki na ubezpieczenie zdrowotne, o których mowa w przepisach ustawy, 
 						podlegające odliczeniu od podatku</div>
 						<div class="skladki68_input white">
 							68.
 							<div class="inputs">
-								<input type="text" name="zdrowotna68c" size="40" value="0.00"/>
+								<input type="text" name="zdrowotna68p2" size="40" value="0.00"/>
 							</div>
 						</div>
 						<div class="skladki69 white">w tym zagraniczne, o których mowa w art. 26 ust. 1 pkt 2a ustawy</div>
 						<div class="skladki69_input white">
 							69.
+							<!--
 							<div class="inputs">
-								<input type="text" name="zdrowotna69c" size="40" value="0.00"/>
+								<input type="text" name="zdrowotna69p2" size="40" value="0.00"/>
 							</div>
+							-->
 						</div>
 					</div>
 				</div>
@@ -1583,7 +1674,7 @@
 					<div class="urzad5 white" align=left>5. Urząd skarbowy, do którego adresowana jest informacja
 						<div class="inputs">
 							<label for="urzad5"></label>
-							<input type="text" name="urzad5m" size="145"/>
+							<input type="text" name="urzad5m" size="145" value=""/>
 						</div>
 					</div>
 					<div class="cel6 white" align=left>6. Cel złożenia formularza (zaznaczyć właściwy kwadrat):
@@ -1606,26 +1697,26 @@
 					<div class="identyfikator10 white">
 						10. Identyfikator podatkowy NIP / numer PESEL
 						<div class="inputs">
-							<input type="text" name="identyfikator10m" maxlength="13" size="145"/>
+							<input type="text" name="identyfikator10m" maxlength="13" size="145" value=""/>
 						</div>
 					</div>
 					<div class="nid">
 						<div class="nazwisko11 white">
 							11. Nazwisko
 							<div class="inputs">
-								<input type="text" name="nazwisko11m" size="45"/>
+								<input type="text" name="nazwisko11m" size="45" value=""/>
 							</div>
 						</div>
 						<div class="imie12 white">
 							12. Pierwsze imię
 							<div class="inputs">
-								<input type="text" name="imie12m" size="40"/>
+								<input type="text" name="imie12m" size="40" value=""/>
 							</div>
 						</div>
 						<div class="data13 white">
 							13. Data urodzenia (dzień-miesiąc-rok)
 							<div class="inputs">
-								<input type="text" name="data13m" size="40"/>
+								<input type="text" name="data13m" size="40" value=""/>
 							</div>
 						</div>
 					</div>
@@ -1633,19 +1724,19 @@
 						<div class="kraj14 white">
 							14. Kraj
 							<div class="inputs">
-								<input type="text" name="kraj14m" size="25"/>
+								<input type="text" name="kraj14m" size="25" value=""/>
 							</div>
 						</div>
 						<div class="wojewodztwo15 white">
 							15. Województwo
 							<div class="inputs">
-								<input type="text" name="wojewodztwo15m" size="60"/>
+								<input type="text" name="wojewodztwo15m" size="60" value=""/>
 							</div>
 						</div>
 						<div class="powiat16 white">
 							16. Powiat
 							<div class="inputs">
-								<input type="text" name="powiat16m" size="45"/>
+								<input type="text" name="powiat16m" size="45" value=""/>
 							</div>
 						</div>
 					</div>
@@ -1653,25 +1744,25 @@
 						<div class="gmina17 white">
 							17. Gmina
 							<div class="inputs">
-								<input type="text" name="gmina17m" size="42"/>
+								<input type="text" name="gmina17m" size="42" value=""/>
 							</div>
 						</div>
 						<div class="ulica18 white">
 							18. Ulica
 							<div class="inputs">
-								<input type="text" name="ulica18m" size="67"/>
+								<input type="text" name="ulica18m" size="67" value=""/>
 							</div>
 						</div>
 						<div class="dom19 white">
 							19. Nr domu
 							<div class="inputs">
-								<input type="text" name="dom19m" size="5"/>
+								<input type="text" name="dom19m" size="5" value=""/>
 							</div>
 						</div>
 						<div class="lokal20 white">
 							20. Nr lokalu
 							<div class="inputs">
-								<input type="text" name="lokal20m" size="5"/>
+								<input type="text" name="lokal20m" size="5" value=""/>
 							</div>
 						</div>
 					</div>
@@ -1679,19 +1770,19 @@
 						<div class="miejscowosc21 white">
 							21. Miejscowość
 							<div class="inputs">
-								<input type="text" name="miejscowosc21m" size="50"/>
+								<input type="text" name="miejscowosc21m" size="50" value=""/>
 							</div>
 						</div>
 						<div class="kod22 white">
 							22. Kod pocztowy
 							<div class="inputs">
-								<input type="text" name="kod22m" size="28"/>
+								<input type="text" name="kod22m" size="28" value=""/>
 							</div>
 						</div>
 						<div class="poczta23 white">
 							23. Poczta
 							<div class="inputs">
-								<input type="text" name="poczta23m" size="50"/>
+								<input type="text" name="poczta23m" size="50" value=""/>
 							</div>
 						</div>
 					</div>
@@ -1737,31 +1828,35 @@
 								<td class="b">
 									25.
 									<div class="inputs">
-										<input type="text" name="przychod25m" size="10" value="0.00"/>
+										<input type="text" name="przychod25mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									26.
 									<div class="inputs">
-										<input type="text" name="przychod26m" size="10" value="0.00"/>
+										<input type="text" name="koszt26mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d" rowspan="2">
 									27.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod27m" size="10" value="0.00"/>
+										<input type="text" name="przychod27mp0" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e" rowspan="2">
 									28.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod28m" size="10" value="0.00"/>
+										<input type="text" name="przychod28mp0" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f" rowspan="2">
 									29.
 									<div class="inputs">
-										<input type="text" name="przychod29m" size="10" value="0.00"/>
+										<input type="text" name="zaliczka29mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1769,13 +1864,13 @@
 								<td class="b">
 									30.
 									<div class="inputs">
-										<input type="text" name="przychod30m" size="10" value="0.00"/>
+										<input type="text" name="przychod30mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									31.
 									<div class="inputs">
-										<input type="text" name="przychod31m" size="10" value="0.00"/>
+										<input type="text" name="koszt31mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1789,21 +1884,23 @@
 								<td class="b">
 									32.
 									<div class="inputs">
-										<input type="text" name="przychod32m" size="10" value="0.00"/>
+										<input type="text" name="przychod32mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c grey" rowspan="4"></td>
 								<td class="d">
 									33.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod33m" size="10" value="0.00"/>
+										<input type="text" name="przychod33mp0" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e grey"></td>
 								<td class="f">
 									34.
 									<div class="inputs">
-										<input type="text" name="przychod34m" size="10" value="0.00"/>
+										<input type="text" name="zaliczka34mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1812,25 +1909,29 @@
 								<td class="b">
 									35.
 									<div class="inputs">
-										<input type="text" name="przychod35m" size="10" value="0.00"/>
+										<input type="text" name="przychod35mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									36.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod36m" size="10" value="0.00"/>
+										<input type="text" name="przychod36mp0" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e">
 									37.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod37m" size="10" value="0.00"/>
+										<input type="text" name="przychod37mp0" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									38.
 									<div class="inputs">
-										<input type="text" name="przychod38m" size="10" value="0.00"/>
+										<input type="text" name="zaliczka38mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1840,20 +1941,22 @@
 								<td class="b">
 									39.
 									<div class="inputs">
-										<input type="text" name="przychod39m" size="10" value="0.00"/>
+										<input type="text" name="przychod39mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									40.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod40m" size="10" value="0.00"/>
+										<input type="text" name="przychod40mp0" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e grey" rowspan="7"></td>
 								<td class="f">
 									41.
 									<div class="inputs">
-										<input type="text" name="przychod41m" size="10" value="0.00"/>
+										<input type="text" name="zaliczka41mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1863,19 +1966,21 @@
 								<td class="b">
 									42.
 									<div class="inputs">
-										<input type="text" name="przychod42m" size="10" value="0.00"/>
+										<input type="text" name="przychod42mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									43.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod43m" size="10" value="0.00"/>
+										<input type="text" name="przychod43mp0" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									44.
 									<div class="inputs">
-										<input type="text" name="przychod44m" size="10" value="0.00"/>
+										<input type="text" name="zaliczka44mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1887,25 +1992,27 @@
 								<td class="b">
 									45.
 									<div class="inputs">
-										<input type="text" name="przychod45m" size="10" value="0.00"/>
+										<input type="text" name="przychod45mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									46.
 									<div class="inputs">
-										<input type="text" name="przychod46m" size="10" value="0.00"/>
+										<input type="text" name="koszt46mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									47.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod47m" size="10" value="0.00"/>
+										<input type="text" name="przychod47mp0" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									48.
 									<div class="inputs">
-										<input type="text" name="przychod48m" size="10" value="0.00"/>
+										<input type="text" name="zaliczka48mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1916,25 +2023,27 @@
 								<td class="b">
 									49.
 									<div class="inputs">
-										<input type="text" name="przychod49m" size="10" value="0.00"/>
+										<input type="text" name="przychod49mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									50.
 									<div class="inputs">
-										<input type="text" name="przychod50m" size="10" value="0.00"/>
+										<input type="text" name="koszt50mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									51.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod51m" size="10" value="0.00"/>
+										<input type="text" name="przychod51mp0" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									52.
 									<div class="inputs">
-										<input type="text" name="przychod52m" size="10" value="0.00"/>
+										<input type="text" name="zaliczka52mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1947,20 +2056,22 @@
 								<td class="b">
 									53.
 									<div class="inputs">
-										<input type="text" name="przychod53m" size="10" value="0.00"/>
+										<input type="text" name="przychod53mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c grey"></td>
 								<td class="d" rowspan="2">
 									54.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod54m" size="10" value="0.00"/>
+										<input type="text" name="przychod54mp0" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f" rowspan="2">
 									55.
 									<div class="inputs">
-										<input type="text" name="przychod55m" size="10" value="0.00"/>
+										<input type="text" name="zaliczka55mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1968,13 +2079,13 @@
 								<td class="b">
 									56.
 									<div class="inputs">
-										<input type="text" name="przychod56m" size="10" value="0.00"/>
+										<input type="text" name="przychod56mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									57.
 									<div class="inputs">
-										<input type="text" name="przychod57m" size="10" value="0.00"/>
+										<input type="text" name="koszt57mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -1983,25 +2094,27 @@
 								<td class="b">
 									58.
 									<div class="inputs">
-										<input type="text" name="przychod58m" size="10" value="0.00"/>
+										<input type="text" name="przychod58mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									59.
 									<div class="inputs">
-										<input type="text" name="przychod59m" size="10" value="0.00"/>
+										<input type="text" name="koszt59mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									60.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod60m" size="10" value="0.00"/>
+										<input type="text" name="przychod60mp0" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 								61.
 									<div class="inputs">
-										<input type="text" name="przychod61m" size="10" value="0.00"/>
+										<input type="text" name="zaliczka61mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2010,26 +2123,30 @@
 								<td class="b">
 									62.
 									<div class="inputs">
-										<input type="text" name="przychod62m" size="10" value="0.00"/>
+										<input type="text" name="przychod62mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c grey"></td>
 								<td class="d">
 									63.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod63m" size="10" value="0.00"/>
+										<input type="text" name="przychod63mp0" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e">
 									64.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod64m" size="10" value="0.00"/>
+										<input type="text" name="przychod64mp0" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									65.
 									<div class="inputs">
-										<input type="text" name="przychod65m" size="10" value="0.00"/>
+										<input type="text" name="zaliczka65mp0" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2041,30 +2158,34 @@
 						<div class="skladki66_input white">
 							66.
 							<div class="inputs">
-								<input type="text" name="skladki66m" size="40" value="0.00"/>
+								<input type="text" name="skladki66mp0" size="40" value="0.00"/>
 							</div>
 						</div>
 						<div class="skladki67 white">w tym zagraniczne, o których mowa w art. 26 ust. 1 pkt 2a ustawy</div>
 						<div class="skladki67_input white">
 							67.
+							<!--
 							<div class="inputs">
-								<input type="text" name="skladki67m" size="40" value="0.00"/>
+								<input type="text" name="skladki67mp0" size="40" value="0.00"/>
 							</div>
+							-->
 						</div>
 						<div class="skladki68 white">Składki na ubezpieczenie zdrowotne, o których mowa w przepisach ustawy, 
 						podlegające odliczeniu od podatku</div>
 						<div class="skladki68_input white">
 							68.
 							<div class="inputs">
-								<input type="text" name="zdrowotna68m" size="40" value="0.00"/>
+								<input type="text" name="zdrowotna68mp0" size="40" value="0.00"/>
 							</div>
 						</div>
 						<div class="skladki69 white">w tym zagraniczne, o których mowa w art. 26 ust. 1 pkt 2a ustawy</div>
 						<div class="skladki69_input white">
 							69.
+							<!--
 							<div class="inputs">
-								<input type="text" name="zdrowotna69m" size="40" value="0.00"/>
+								<input type="text" name="zdrowotna69mp0" size="40" value="0.00"/>
 							</div>
+							-->
 						</div>
 					</div>
 				</div>
@@ -2173,31 +2294,35 @@
 								<td class="b">
 									25.
 									<div class="inputs">
-										<input type="text" name="przychod25mb" size="10" value="0.00"/>
+										<input type="text" name="przychod25mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									26.
 									<div class="inputs">
-										<input type="text" name="przychod26mb" size="10" value="0.00"/>
+										<input type="text" name="koszt26mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d" rowspan="2">
 									27.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod27mb" size="10" value="0.00"/>
+										<input type="text" name="przychod27mp1" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e" rowspan="2">
 									28.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod28mb" size="10" value="0.00"/>
+										<input type="text" name="przychod28mp1" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f" rowspan="2">
 									29.
 									<div class="inputs">
-										<input type="text" name="przychod29mb" size="10" value="0.00"/>
+										<input type="text" name="zaliczka29mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2205,13 +2330,13 @@
 								<td class="b">
 									30.
 									<div class="inputs">
-										<input type="text" name="przychod30mb" size="10" value="0.00"/>
+										<input type="text" name="przychod30mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									31.
 									<div class="inputs">
-										<input type="text" name="przychod31mb" size="10" value="0.00"/>
+										<input type="text" name="koszt31mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2225,21 +2350,23 @@
 								<td class="b">
 									32.
 									<div class="inputs">
-										<input type="text" name="przychod32mb" size="10" value="0.00"/>
+										<input type="text" name="przychod32mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c grey" rowspan="4"></td>
 								<td class="d">
 									33.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod33mb" size="10" value="0.00"/>
+										<input type="text" name="przychod33mp1" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e grey"></td>
 								<td class="f">
 									34.
 									<div class="inputs">
-										<input type="text" name="przychod34mb" size="10" value="0.00"/>
+										<input type="text" name="zaliczka34mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2248,25 +2375,29 @@
 								<td class="b">
 									35.
 									<div class="inputs">
-										<input type="text" name="przychod35mb" size="10" value="0.00"/>
+										<input type="text" name="przychod35mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									36.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod36mb" size="10" value="0.00"/>
+										<input type="text" name="przychod36mp1" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e">
 									37.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod37mb" size="10" value="0.00"/>
+										<input type="text" name="przychod37mp1" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									38.
 									<div class="inputs">
-										<input type="text" name="przychod38mb" size="10" value="0.00"/>
+										<input type="text" name="zaliczka38mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2276,20 +2407,22 @@
 								<td class="b">
 									39.
 									<div class="inputs">
-										<input type="text" name="przychod39mb" size="10" value="0.00"/>
+										<input type="text" name="przychod39mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									40.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod40mb" size="10" value="0.00"/>
+										<input type="text" name="przychod40mp1" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e grey" rowspan="7"></td>
 								<td class="f">
 									41.
 									<div class="inputs">
-										<input type="text" name="przychod41mb" size="10" value="0.00"/>
+										<input type="text" name="zaliczka41mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2299,19 +2432,21 @@
 								<td class="b">
 									42.
 									<div class="inputs">
-										<input type="text" name="przychod42mb" size="10" value="0.00"/>
+										<input type="text" name="przychod42mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									43.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod43mb" size="10" value="0.00"/>
+										<input type="text" name="przychod43mp1" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									44.
 									<div class="inputs">
-										<input type="text" name="przychod44mb" size="10" value="0.00"/>
+										<input type="text" name="zaliczka44mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2323,25 +2458,27 @@
 								<td class="b">
 									45.
 									<div class="inputs">
-										<input type="text" name="przychod45mb" size="10" value="0.00"/>
+										<input type="text" name="przychod45mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									46.
 									<div class="inputs">
-										<input type="text" name="przychod46mb" size="10" value="0.00"/>
+										<input type="text" name="koszt46mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									47.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod47mb" size="10" value="0.00"/>
+										<input type="text" name="przychod47mp1" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									48.
 									<div class="inputs">
-										<input type="text" name="przychod48mb" size="10" value="0.00"/>
+										<input type="text" name="zaliczka48mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2352,25 +2489,27 @@
 								<td class="b">
 									49.
 									<div class="inputs">
-										<input type="text" name="przychod49mb" size="10" value="0.00"/>
+										<input type="text" name="przychod49mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									50.
 									<div class="inputs">
-										<input type="text" name="przychod50mb" size="10" value="0.00"/>
+										<input type="text" name="koszt50mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									51.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod51mb" size="10" value="0.00"/>
+										<input type="text" name="przychod51mp1" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									52.
 									<div class="inputs">
-										<input type="text" name="przychod52mb" size="10" value="0.00"/>
+										<input type="text" name="zaliczka52mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2383,20 +2522,22 @@
 								<td class="b">
 									53.
 									<div class="inputs">
-										<input type="text" name="przychod53mb" size="10" value="0.00"/>
+										<input type="text" name="przychod53mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c grey"></td>
 								<td class="d" rowspan="2">
 									54.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod54mb" size="10" value="0.00"/>
+										<input type="text" name="przychod54mp1" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f" rowspan="2">
 									55.
 									<div class="inputs">
-										<input type="text" name="przychod55mb" size="10" value="0.00"/>
+										<input type="text" name="zaliczka55mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2404,13 +2545,13 @@
 								<td class="b">
 									56.
 									<div class="inputs">
-										<input type="text" name="przychod56mb" size="10" value="0.00"/>
+										<input type="text" name="przychod56mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									57.
 									<div class="inputs">
-										<input type="text" name="przychod57mb" size="10" value="0.00"/>
+										<input type="text" name="koszt57mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2419,25 +2560,27 @@
 								<td class="b">
 									58.
 									<div class="inputs">
-										<input type="text" name="przychod58mb" size="10" value="0.00"/>
+										<input type="text" name="przychod58mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									59.
 									<div class="inputs">
-										<input type="text" name="przychod59mb" size="10" value="0.00"/>
+										<input type="text" name="koszt59mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									60.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod60mb" size="10" value="0.00"/>
+										<input type="text" name="przychod60mp1" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 								61.
 									<div class="inputs">
-										<input type="text" name="przychod61mb" size="10" value="0.00"/>
+										<input type="text" name="zaliczka61mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2446,26 +2589,30 @@
 								<td class="b">
 									62.
 									<div class="inputs">
-										<input type="text" name="przychod62mb" size="10" value="0.00"/>
+										<input type="text" name="przychod62mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c grey"></td>
 								<td class="d">
 									63.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod63mb" size="10" value="0.00"/>
+										<input type="text" name="przychod63mp1" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e">
 									64.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod64mb" size="10" value="0.00"/>
+										<input type="text" name="przychod64mp1" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									65.
 									<div class="inputs">
-										<input type="text" name="przychod65mb" size="10" value="0.00"/>
+										<input type="text" name="zaliczka65mp1" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2477,30 +2624,34 @@
 						<div class="skladki66_input white">
 							66.
 							<div class="inputs">
-								<input type="text" name="skladki66mb" size="40" value="0.00"/>
+								<input type="text" name="skladki66mp1" size="40" value="0.00"/>
 							</div>
 						</div>
 						<div class="skladki67 white">w tym zagraniczne, o których mowa w art. 26 ust. 1 pkt 2a ustawy</div>
 						<div class="skladki67_input white">
 							67.
+							<!--
 							<div class="inputs">
-								<input type="text" name="skladki67mb" size="40" value="0.00"/>
+								<input type="text" name="skladki67mp1" size="40" value="0.00"/>
 							</div>
+							-->
 						</div>
 						<div class="skladki68 white">Składki na ubezpieczenie zdrowotne, o których mowa w przepisach ustawy, 
 						podlegające odliczeniu od podatku</div>
 						<div class="skladki68_input white">
 							68.
 							<div class="inputs">
-								<input type="text" name="zdrowotna68mb" size="40" value="0.00"/>
+								<input type="text" name="zdrowotna68mp1" size="40" value="0.00"/>
 							</div>
 						</div>
 						<div class="skladki69 white">w tym zagraniczne, o których mowa w art. 26 ust. 1 pkt 2a ustawy</div>
 						<div class="skladki69_input white">
 							69.
+							<!--
 							<div class="inputs">
-								<input type="text" name="zdrowotna69mb" size="40" value="0.00"/>
+								<input type="text" name="zdrowotna69mp1" size="40" value="0.00"/>
 							</div>
+							-->
 						</div>
 					</div>
 				</div>
@@ -2548,31 +2699,35 @@
 								<td class="b">
 									25.
 									<div class="inputs">
-										<input type="text" name="przychod25mc" size="10" value="0.00"/>
+										<input type="text" name="przychod25mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									26.
 									<div class="inputs">
-										<input type="text" name="przychod26mc" size="10" value="0.00"/>
+										<input type="text" name="koszt26mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d" rowspan="2">
 									27.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod27mc" size="10" value="0.00"/>
+										<input type="text" name="przychod27mp2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e" rowspan="2">
 									28.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod28mc" size="10" value="0.00"/>
+										<input type="text" name="przychod28mp2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f" rowspan="2">
 									29.
 									<div class="inputs">
-										<input type="text" name="przychod29mc" size="10" value="0.00"/>
+										<input type="text" name="zaliczka29mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2580,13 +2735,13 @@
 								<td class="b">
 									30.
 									<div class="inputs">
-										<input type="text" name="przychod30mc" size="10" value="0.00"/>
+										<input type="text" name="przychod30mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									31.
 									<div class="inputs">
-										<input type="text" name="przychod31mc" size="10" value="0.00"/>
+										<input type="text" name="koszt31mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2600,21 +2755,23 @@
 								<td class="b">
 									32.
 									<div class="inputs">
-										<input type="text" name="przychod32mc" size="10" value="0.00"/>
+										<input type="text" name="przychod32mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c grey" rowspan="4"></td>
 								<td class="d">
 									33.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod33mc" size="10" value="0.00"/>
+										<input type="text" name="przychod33mp2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e grey"></td>
 								<td class="f">
 									34.
 									<div class="inputs">
-										<input type="text" name="przychod34mc" size="10" value="0.00"/>
+										<input type="text" name="zaliczka34mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2623,25 +2780,29 @@
 								<td class="b">
 									35.
 									<div class="inputs">
-										<input type="text" name="przychod35mc" size="10" value="0.00"/>
+										<input type="text" name="przychod35mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									36.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod36mc" size="10" value="0.00"/>
+										<input type="text" name="przychod36mp2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e">
 									37.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod37mc" size="10" value="0.00"/>
+										<input type="text" name="przychod37mp2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									38.
 									<div class="inputs">
-										<input type="text" name="przychod38mc" size="10" value="0.00"/>
+										<input type="text" name="zaliczka38mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2651,20 +2812,22 @@
 								<td class="b">
 									39.
 									<div class="inputs">
-										<input type="text" name="przychod39mc" size="10" value="0.00"/>
+										<input type="text" name="przychod39mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									40.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod40mc" size="10" value="0.00"/>
+										<input type="text" name="przychod40mp2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e grey" rowspan="7"></td>
 								<td class="f">
 									41.
 									<div class="inputs">
-										<input type="text" name="przychod41mc" size="10" value="0.00"/>
+										<input type="text" name="zaliczka41mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2674,19 +2837,21 @@
 								<td class="b">
 									42.
 									<div class="inputs">
-										<input type="text" name="przychod42mc" size="10" value="0.00"/>
+										<input type="text" name="przychod42mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									43.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod43mc" size="10" value="0.00"/>
+										<input type="text" name="przychod43mp2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									44.
 									<div class="inputs">
-										<input type="text" name="przychod44mc" size="10" value="0.00"/>
+										<input type="text" name="zaliczka44mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2698,25 +2863,27 @@
 								<td class="b">
 									45.
 									<div class="inputs">
-										<input type="text" name="przychod45mc" size="10" value="0.00"/>
+										<input type="text" name="przychod45mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									46.
 									<div class="inputs">
-										<input type="text" name="przychod46mc" size="10" value="0.00"/>
+										<input type="text" name="koszt46mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									47.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod47mc" size="10" value="0.00"/>
+										<input type="text" name="przychod47mp2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									48.
 									<div class="inputs">
-										<input type="text" name="przychod48mc" size="10" value="0.00"/>
+										<input type="text" name="zaliczka48mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2727,25 +2894,27 @@
 								<td class="b">
 									49.
 									<div class="inputs">
-										<input type="text" name="przychod49mc" size="10" value="0.00"/>
+										<input type="text" name="przychod49mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									50.
 									<div class="inputs">
-										<input type="text" name="przychod50mc" size="10" value="0.00"/>
+										<input type="text" name="koszt50mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									51.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod51mc" size="10" value="0.00"/>
+										<input type="text" name="przychod51mp2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									52.
 									<div class="inputs">
-										<input type="text" name="przychod52mc" size="10" value="0.00"/>
+										<input type="text" name="zaliczka52mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2758,20 +2927,22 @@
 								<td class="b">
 									53.
 									<div class="inputs">
-										<input type="text" name="przychod53mc" size="10" value="0.00"/>
+										<input type="text" name="przychod53mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c grey"></td>
 								<td class="d" rowspan="2">
 									54.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod54mc" size="10" value="0.00"/>
+										<input type="text" name="przychod54mp2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f" rowspan="2">
 									55.
 									<div class="inputs">
-										<input type="text" name="przychod55mc" size="10" value="0.00"/>
+										<input type="text" name="zaliczka55mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2779,13 +2950,13 @@
 								<td class="b">
 									56.
 									<div class="inputs">
-										<input type="text" name="przychod56mc" size="10" value="0.00"/>
+										<input type="text" name="przychod56mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									57.
 									<div class="inputs">
-										<input type="text" name="przychod57mc" size="10" value="0.00"/>
+										<input type="text" name="koszt57mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2794,25 +2965,27 @@
 								<td class="b">
 									58.
 									<div class="inputs">
-										<input type="text" name="przychod58mc" size="10" value="0.00"/>
+										<input type="text" name="przychod58mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c">
 									59.
 									<div class="inputs">
-										<input type="text" name="przychod59mc" size="10" value="0.00"/>
+										<input type="text" name="koszt59mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="d">
 									60.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod60mc" size="10" value="0.00"/>
+										<input type="text" name="przychod60mp2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 								61.
 									<div class="inputs">
-										<input type="text" name="przychod61mc" size="10" value="0.00"/>
+										<input type="text" name="zaliczka61mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2821,26 +2994,30 @@
 								<td class="b">
 									62.
 									<div class="inputs">
-										<input type="text" name="przychod62mc" size="10" value="0.00"/>
+										<input type="text" name="przychod62mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 								<td class="c grey"></td>
 								<td class="d">
 									63.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod63mc" size="10" value="0.00"/>
+										<input type="text" name="przychod63mp2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="e">
 									64.
+									<!--
 									<div class="inputs">
-										<input type="text" name="przychod64mc" size="10" value="0.00"/>
+										<input type="text" name="przychod64mp2" size="10" value="0.00"/>
 									</div>
+									-->
 								</td>
 								<td class="f">
 									65.
 									<div class="inputs">
-										<input type="text" name="przychod65mc" size="10" value="0.00"/>
+										<input type="text" name="zaliczka65mp2" size="10" value="0.00"/>
 									</div>
 								</td>
 							</tr>
@@ -2852,30 +3029,34 @@
 						<div class="skladki66_input white">
 							66.
 							<div class="inputs">
-								<input type="text" name="skladki66mc" size="40" value="0.00"/>
+								<input type="text" name="skladki66mp2" size="40" value="0.00"/>
 							</div>
 						</div>
 						<div class="skladki67 white">w tym zagraniczne, o których mowa w art. 26 ust. 1 pkt 2a ustawy</div>
 						<div class="skladki67_input white">
 							67.
+							<!--
 							<div class="inputs">
-								<input type="text" name="skladki67mc" size="40" value="0.00"/>
+								<input type="text" name="skladki67mp2" size="40" value="0.00"/>
 							</div>
+							-->
 						</div>
 						<div class="skladki68 white">Składki na ubezpieczenie zdrowotne, o których mowa w przepisach ustawy, 
 						podlegające odliczeniu od podatku</div>
 						<div class="skladki68_input white">
 							68.
 							<div class="inputs">
-								<input type="text" name="zdrowotna68mc" size="40" value="0.00"/>
+								<input type="text" name="zdrowotna68mp2" size="40" value="0.00"/>
 							</div>
 						</div>
 						<div class="skladki69 white">w tym zagraniczne, o których mowa w art. 26 ust. 1 pkt 2a ustawy</div>
 						<div class="skladki69_input white">
 							69.
+							<!--
 							<div class="inputs">
-								<input type="text" name="zdrowotna69mc" size="40" value="0.00"/>
+								<input type="text" name="zdrowotna69mp2" size="40" value="0.00"/>
 							</div>
+							-->
 						</div>
 					</div>
 				</div>
