@@ -113,10 +113,12 @@ def pit11():
             #[1] doch po odliczeniu internetu
             if self.kto == "Podatnik" and kto_internet == 1.0:
                 self.odliczenia.append(OdliczeniaOdPrzychodu(kwotaInternet, dochodPoOdliczeniuSkladek))
-                Podatnik.pitO = True
+                if OdliczeniaOdPrzychodu(kwotaInternet, dochodPoOdliczeniuSkladek) > 0:
+                    Podatnik.pitO = True
             elif self.kto == "Małżonek" and kto_internet == 2.0:
                 self.odliczenia.append(OdliczeniaOdPrzychodu(kwotaInternet, dochodPoOdliczeniuSkladek))
-                Podatnik.pitO = True
+                if OdliczeniaOdPrzychodu(kwotaInternet, dochodPoOdliczeniuSkladek) > 0:
+                    Podatnik.pitO = True
             else:
                 self.odliczenia.append(0.0)
             #[2] dochód po wszystkich odliczeniach
