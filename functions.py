@@ -15,7 +15,7 @@ def replace(value):
     except:
         return 0
 
-def OdliczeniaOdPrzychodu(kwota, odliczenia):
+def odliczeniaOdPrzychodu(kwota, odliczenia):
     '''
     :param kwota: kwota odliczenia np. za internet
     :param odliczenia: dochód po odliczeniu składek społecznych
