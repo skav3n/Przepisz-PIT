@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from flask import Flask, request, render_template
-from functions import replace, OdliczeniaOdPrzychodu, liczPodatek, liczUlgeNaDziecko
+from functions import replace, odliczeniaOdPrzychodu, liczPodatek, liczUlgeNaDziecko
 
 app = Flask(__name__)
 
@@ -112,12 +112,12 @@ def pit11():
             #odliczenie internetu i może później innych odliczeń
             #[1] doch po odliczeniu internetu
             if self.kto == "Podatnik" and kto_internet == 1.0:
-                self.odliczenia.append(OdliczeniaOdPrzychodu(kwotaInternet, dochodPoOdliczeniuSkladek))
-                if OdliczeniaOdPrzychodu(kwotaInternet, dochodPoOdliczeniuSkladek) > 0:
+                self.odliczenia.append(odliczeniaOdPrzychodu(kwotaInternet, dochodPoOdliczeniuSkladek))
+                if odliczeniaOdPrzychodu(kwotaInternet, dochodPoOdliczeniuSkladek) > 0:
                     Podatnik.pitO = True
             elif self.kto == "Małżonek" and kto_internet == 2.0:
-                self.odliczenia.append(OdliczeniaOdPrzychodu(kwotaInternet, dochodPoOdliczeniuSkladek))
-                if OdliczeniaOdPrzychodu(kwotaInternet, dochodPoOdliczeniuSkladek) > 0:
+                self.odliczenia.append(odliczeniaOdPrzychodu(kwotaInternet, dochodPoOdliczeniuSkladek))
+                if odliczeniaOdPrzychodu(kwotaInternet, dochodPoOdliczeniuSkladek) > 0:
                     Podatnik.pitO = True
             else:
                 self.odliczenia.append(0.0)
