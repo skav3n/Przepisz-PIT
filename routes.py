@@ -186,7 +186,8 @@ def pit11():
     # wspólne odliczenia od podatku
     # [0] podstawa podatku, [1] obliczenie podatku, [2] doliczenia do podatku, [3] "surowy" podatek
     obliczaniePodatku = liczPodatek(danePanel[0], (podatnik.odliczenia[2] + malzonek.odliczenia[2]),
-                                    (podatnik.razemPKZD[2] + malzonek.razemPKZD[2]), ulgiNaDzieci=0)
+                                    (podatnik.razemPKZD[2] + malzonek.razemPKZD[2]),
+                                    (podatnik.pkzds[29] + malzonek.pkzds[29]), ulgiNaDzieci=0)
 
     podatnik.odliczeniaOdPodatku(danePanel[0], danePanel[5], ktoDzieci, ileMiesiecy)
     malzonek.odliczeniaOdPodatku(danePanel[0], danePanel[5], ktoDzieci, ileMiesiecy)
@@ -195,6 +196,7 @@ def pit11():
     # [4] podatek minus ulgi na dzieci, [5] podatek należny, [6] podatek DO ZAPŁATY, [7] NADPŁATA
     obliczaniePodatku = liczPodatek(danePanel[0], (podatnik.odliczenia[2] + malzonek.odliczenia[2]),
                                     (podatnik.razemPKZD[2] + malzonek.razemPKZD[2]),
+                                    (podatnik.pkzds[29] + malzonek.pkzds[29]),
                                     (podatnik.kwotaUlgiNaDzieci + malzonek.kwotaUlgiNaDzieci))
 
     return render_template('pit37.html', danePanel=danePanel, jedenProcent=jedenProcent, daneOsobowe=daneOsobowe,

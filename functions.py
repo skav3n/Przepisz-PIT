@@ -29,7 +29,7 @@ def odliczeniaOdPrzychodu(kwota, odliczenia):
         kwota = odliczenia
     return kwota
 
-def liczPodatek(sposob, dochod, zaliczki, ulgiNaDzieci=0):
+def liczPodatek(sposob, dochod, zaliczki, zdrowotna, ulgiNaDzieci=0):
     '''
     :param sposob: sposób rozliczenia:
         "1.0" indywidualnie
@@ -45,7 +45,7 @@ def liczPodatek(sposob, dochod, zaliczki, ulgiNaDzieci=0):
     obliczaniePodatku = []
     #Podstawa obliczania podatku [0]
     if sposob == 1.0:
-        obliczaniePodatku.append(dochod)
+        obliczaniePodatku.append(round(dochod))
     else:
         obliczaniePodatku.append(round((dochod / 2), 2))
     #obliczanie podatku [1]
@@ -70,8 +70,8 @@ def liczPodatek(sposob, dochod, zaliczki, ulgiNaDzieci=0):
     obliczaniePodatku.append(doliczeniaDoPodatku)
     #"surowy" Podatek [3]
     obliczaniePodatku.append(obliczaniePodatku[1] + obliczaniePodatku[2])
-    #Podatek minus ulgi na dzieci [4]
-    obliczaniePodatku.append(round((obliczaniePodatku[3] - ulgiNaDzieci), 2))
+    #Podatek minus składki zdrowotne i ulgi na dzieci [4]
+    obliczaniePodatku.append(round((obliczaniePodatku[3] - zdrowotna - ulgiNaDzieci), 2))
     #Podatek należny [5]
     obliczaniePodatku.append(round(obliczaniePodatku[4]))
     #Podatek DO ZAPŁATY [6]
