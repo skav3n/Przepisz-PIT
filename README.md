@@ -1,7 +1,7 @@
 # PIT
 PIT11 to PIT37
 
-http://skav3n.pythonanywhere.com/
+www.przepiszpit.pl
 
 this website can help you to fill the form "PIT37"
 You only have to rewrite "PIT11"
