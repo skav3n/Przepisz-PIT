@@ -5,37 +5,17 @@
 ====================================*/
 
 #banner {
-	background-image: url("../jpg/baner.png");
-	background-repeat: no-repeat;
-	background-position: center;
-    height: 320px;
-    padding-top: 100px;
-    .banner-pit {
-        background-color: lightgrey;
-        width: 200px;
-        margin-left: 20px;
-    	p {
-    		padding: 5px;
-	        text-align: center; 
-	        font-size: 26px;
-	        font-weight: 700;
-	        line-height: 50px;
-    	}
-    }
-    .banner-wypelnij {
-        background-color: lightgrey;
-        width: 275px;
-	    margin-left: 20px;
-    	p {
-    		text-align: center; 
-    		padding: 5px;
-		  	font-size: 20px;
-		  	font-weight: 700;
-		  	line-height: 50px;
-		}
-    }
+    margin: 25px 0;
+    background-image: url('../jpg/ship-banner.jpg');
+    width: 100%;
+    height: 50vmin;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    
     #action-button {
     	text-align: center;
+    	position: relative;
+    	top: 50%;
     	a {
     		text-decoration: none;
     	}
@@ -62,16 +42,28 @@
                 Content
 ====================================*/
 .tille1 {
-    height: 100%;
+    margin: 25px 0;
+    width: 100%;
+    text-align: left;
+    h1 {
+        font-size: 26px;
+    }
     span {
-    	font-size: 24px;
+    	font-size: 20px;
+    }
+    p {
+        font-size: 20px;
     }
 }
 .tille2 {
-    height: 100%;
-    padding: 20px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 0 0 20px;
     ol {
     	line-height: 30px;
+    	ul {
+    	    margin: 0 0 0 50px;
+    	}
     }
 }
 
@@ -79,7 +71,10 @@
                 Contact
 ====================================*/
 .contact-form {
-	p {
+    margin: 25px 0;
+    text-align: left;
+	h3 {
+	    line-height: 30px;
 		span {
 			font-weight: 600;
 			opacity: 0.75;

@@ -1,0 +1,860 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title>title</title>
+
+	<link rel="stylesheet" href="pit37_nowy.css" type="text/css" />
+	<script src="script.js"></script>
+	
+	<link href='https://fonts.googleapis.com/css?family=Lobster|Lato|Racing+Sans+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+	<div id="pit37">
+		<div class="container">
+			<div id="page_one">
+				<div class="poltax37"><p>POLTAX</p></div>
+				<div class="poltax37_two">POLA JASNE WYPEŁNIA PŁATNIK, POLA CIEMNE WYPEŁNIA URZĄD SKARBOWY. WYPEŁNIAĆ
+					MASZYNIE, KOMPUTEROWO LUB RĘCZNIE DUŻYMI, DRUKOWANYMI LITERAMI, CZARNYM LUB NIEBIESKIM KOLOREM.  
+				</div>
+				<hr style="clear: both;">
+				
+				<div class="two37 white">
+					<div class="ide37">
+						<div class="identyfikator">
+							1. Identyfikator podatkowy NIP / numer PESEL podatnika
+							<p>{{ daneOsobowe[0][1] }}</p>
+						</div>
+						<div class="identyfikator">
+							2. Identyfikator podatkowy NIP / numer PESEL małżonka
+							<p>{{ daneOsobowe[1][1] }}</p>
+						</div>
+					</div>
+					<div class="nr337 grey borders">
+						3. Nr dokumentu
+					</div>
+					<div class="status437 grey borders">
+						4. Status
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+				
+				<div class="three37 borders">
+					<div class="name1">PIT-37</div>
+					<div class="name2">Prawidłowe wypełnienie formularza ułatwi wcześniejsze zapoznanie 
+					się z broszurą informacyjną dostępną w urzędach.
+					</div>
+					<div style="clear: both;"></div>
+					<div class="zeznanie1">
+						ZEZNANIE O WYSOKOŚCI <br>
+						OSIĄGNIĘTEGO DOCHODU (PONIESIONEJ STRATY)
+					</div>
+					<div class="zeznanie2">
+						W ROKU PODATKOWYM
+					</div>
+					<div class="rok37 white borders">
+						5. Rok
+						<p><script>document.write(new Date().getFullYear() - 1)</script></p>
+					</div>
+					<div style="clear: both;"></div>
+					<div class="form1">
+						Formularz przeznaczony jest dla podatników, którzy w roku podatkowym: <br>
+						1) wyłącznie za pośrednictwem płatnika uzyskali przychody ze źródeł położonych na 
+						terytorium Rzeczypospolitej Polskiej, podlegające opodatkowaniu na ogólnych zasadach
+						przy zastosowaniu skali podatkowej, tj. w szczególności z tytułu
+					</div>
+					<div class="form2">
+						- wynagrodzeń i innych przychodów ze stosunku służbowego, stosunkupracy (w tym spółdzielczego <br>
+						stosunku pracy) oraz pracy nakładczej
+						- emerytur lub rent krajowych (w tym rent strukturalnych, rent socjalnych), <br>
+						- świadczeń przedemerytalnych, zasiłków przedemerytalnych, <br>
+						- należności z tytułu członkowstwa w rolniczych spółdzielniach produkcyjnych lub innych spółdzielniach zajmujących się produkcją rolną, <br>
+						- zasiłków pieniężnych z ubezpieczenia społecznego, <br>
+						- stypendiów, <br>
+					</div>
+					<div class="form2">
+						- przychodów z działalności wykonywanej osobiście (między innymi z umów zlecenia, kontraktów menedżerskich, zasiadania w radach nadzorczych, pełnienia obowiązków społecznych, działalności sportowej), <br>
+						- przychodów z praw autorskich i innych praw majątkowych, <br>
+						- świadczeń wypłaconych z Funduszu Pracy lub z Funduszu Gwarantowanych Świadczeń Pracowniczych, <br>
+						- należności za pracę przypadających tymczasowo aresztowanym orazskazanym, <br>
+						- należności z umowy aktywizacyjnej, <br>
+					</div>
+					<div style="clear: both;"></div>
+					<div class="form1">
+						2) nie prowadzili pozarolniczej działalności gospodarczej oraz działów specjalnych produkcji rolnej opodatkowanych na ogólnych zasadach przy zastosowaniu skali podatkowej,
+					</div>
+					<div class="form1">
+					3) nie są obowiązani doliczać do uzyskanych dochodów dochodów małoletnich dzieci,
+					</div>
+					<div class="form1">
+					4) nie obniżają dochodów o straty z lat ubiegłych.
+					</div>
+				</div>
+				
+				<div  class="podstawyPrawne white borders">
+					<div class="pod">Podstawa prawna:</div>
+					<div class="art">Art.45 ust.1 ustawy z dnia 26 lipca 1991 r. o podatku dochodowym od osób fizycznych
+					(Dz.U.z 2012 r. poz.361, z późn.zm.), zwanej dalej ”ustawą ”.</div>
+					<div style="clear: both;"></div>
+					<div class="pod">Termin składania:</div>
+					<div class="art">Do dnia 30 kwietnia roku następującego po roku podatkowym</div>
+					<div style="clear: both;"></div>
+					<div class="pod">Miejsce składania:</div>
+					<div class="art">Urząd, o którym mowa w art. 45 ustawy, zwany dalej "urzędem".</div>
+					<div style="clear: both;"></div>
+				</div>
+				
+				<div class="wybor37 white borders">
+						Wybór sposobu opodatkowania (zaznaczyć właściwe kwadraty): <br>
+					<div class="form1">
+						
+						6. 1. Indywidualnie
+						
+					</div>
+					<div class="form1">
+						
+						2. wspólnie z małżonkiem, zgodnie z wnioskiem, o którym mowa w art.6 ust.2 ustawy
+						
+					</div>
+					<div class="form1">
+						
+						3. wspólnie z małżonkiem, zgodnie z wnioskiem, o którym mowa w art.6a ust.1 ustawy
+						
+					</div>
+					<div class="form1">
+						
+						4. w sposób przewidziany dla osób samotnie wychowujących dzieci
+						
+					</div>
+					<div style="clear: both;"></div>
+					<div class="form2">
+						7. 
+						
+						w sposób przewidziany w art.29 ust.4 ustawy - podatnik
+					</div>
+					<div class="form2">
+						8.
+						
+						  w sposób przewidziany w art.29 ust.4 ustawy - małżonek
+					</div>
+				</div>
+				<div class="wybor37 white borders">
+					Zaznaczenie odpowiednich kwadratów oraz złożenie podpisu(ów) w części L traktuje się na równi ze 
+					złożeniem wniosku o zastosowanie wskazanego sposobu opodatkowania. Kwadrat w poz. 7 lub 8 zaznacza 
+					się łącznie z kwadratem 1, 2, 3 albo 4 w poz. 6
+				</div>
+				
+				<div class="a37 grey borders">
+					<h3>A. MIEJSCE I CEL SKŁADANIA ZEZNANIA</h3>
+					<div class="miejsceIcel white ">
+						9. Urząd, do którego adresowane jest zeznanie
+						<p>{{ daneOsobowe[0][1] }}</p>
+					</div>
+					<div class="miejsceIcel white ">
+						10. Cel złożenia formularza (zaznaczyć odpowiedni kwadrat):
+						<p><i class="icon-ok-squared"></i> 1. złożenie zeznania
+						<i class="icon-check-empty"></i> 2. korekta zeznania</p>
+					</div>
+				</div>
+				
+				<div class="b37 grey borders">
+					<h3>B. DANE IDENTYFIKACYJNE I AKTUALNY ADRES ZAMIESZKANIA</h3>
+				</div>
+				
+				<div class="b1_37 grey borders">
+					<h3>B.1. DANE PODATNIKA</h3>
+						<div class="nazwisko11_37 white ">
+							11. Nazwisko
+							<p>{{ daneOsobowe[0][2] }}</p>
+						</div>
+						<div class="imie12_37 white ">
+							12. Pierwsze imię
+							<p>{{ daneOsobowe[0][3] }}</p>
+						</div>
+						<div class="data13_37 white ">
+							13. Data urodzenia (dzień-miesiąc-rok)
+							<p>{{ daneOsobowe[0][4] }}</p>
+						</div>
+						
+						<div class="kraj14_37 white ">
+							14. Kraj
+							<p>{{ daneOsobowe[0][5] }}</p>
+						</div>
+						<div class="wojewodztwo15_37 white ">
+							15. Województwo
+							<p>{{ daneOsobowe[0][6] }}</p>
+						</div>
+						<div class="powiat16_37 white ">
+							16. Powiat
+							<p>{{ daneOsobowe[0][7] }}</p>
+						</div>
+						
+						<div class="gmina17_37 white ">
+							17. Gmina
+							<p>{{ daneOsobowe[0][8] }}</p>
+						</div>
+						<div class="ulica18_37 white ">
+							18. Ulica
+							<p>{{ daneOsobowe[0][9] }}</p>
+						</div>
+						<div class="dom19_37 white ">
+							19. Nr domu
+							<p>[0][10]</p>
+						</div>
+						<div class="lokal20_37 white ">
+							20. Nr lokalu
+							<p>[0][11]</p>
+						</div>
+						
+						<div class="miejscowosc21_37 white ">
+							21. Miejscowość
+							<p>{{ daneOsobowe[0][12] }}</p>
+						</div>
+						<div class="kod22_37 white ">
+							22. Kod pocztowy
+							<p>[0][13]</p>
+						</div>
+						<div class="poczta23_37 white ">
+							23. Poczta
+							<p>{{ daneOsobowe[0][14] }}</p>
+						</div>
+						<div style="clear: both;"></div>
+				</div>
+				<div class="b2_37 grey borders">
+					<h3>B.1. DANE MAŁŻONKA</h3>
+						<div class="nazwisko11_37 white ">
+							24. Nazwisko
+							<p>{{ daneOsobowe[1][2] }}</p>
+						</div>
+						<div class="imie12_37 white ">
+							25. Pierwsze imię
+							<p>{{ daneOsobowe[1][3] }}</p>
+						</div>
+						<div class="data13_37 white ">
+							26. Data urodzenia (dzień-miesiąc-rok)
+							<p>{{ daneOsobowe[1][4] }}</p>
+						</div>
+						
+						<div class="kraj14_37 white ">
+							27. Kraj
+							<p>{{ daneOsobowe[1][5] }}</p>
+						</div>
+						<div class="wojewodztwo15_37 white ">
+							28. Województwo
+							<p>{{ daneOsobowe[1][6] }}</p>
+						</div>
+						<div class="powiat16_37 white ">
+							29. Powiat
+							<p>{{ daneOsobowe[1][7] }}</p>
+						</div>
+						
+						<div class="gmina17_37 white ">
+							30. Gmina
+							<p>{{ daneOsobowe[1][8] }}</p>
+						</div>
+						<div class="ulica18_37 white ">
+							31. Ulica
+							<p>{{ daneOsobowe[1][9] }}</p>
+						</div>
+						<div class="dom19_37 white ">
+							32. Nr domu
+							<p>[1][10]</p>
+						</div>
+						<div class="lokal20_37 white ">
+							33. Nr lokalu
+							<p>[1][11]</p>
+						</div>
+						
+						<div class="miejscowosc21_37 white ">
+							34. Miejscowość
+							<p>{{ daneOsobowe[1][12] }}</p>
+						</div>
+						<div class="kod22_37 white ">
+							35. Kod pocztowy
+							<p>[1][13]</p>
+						</div>
+						<div class="poczta23_37 white ">
+							36. Poczta
+							<p>{{ daneOsobowe[1][14] }}</p>
+						</div>
+						<div style="clear: both;"></div>
+				</div>
+				
+				<div class="endPage borders">
+					<div class="page1">PIT-37<sub>(20)</sub></div>
+					<div class="page2">1<sub>/4</sub></div>
+				</div>
+				<div style="clear: both;"></div>
+					
+			</div><!-- /one page -->
+			
+			
+			<div id="page_two">
+				<div class="poltax37"><p>POLTAX</p></div>
+				<div class="poltax37_two">POLA JASNE WYPEŁNIA PŁATNIK, POLA CIEMNE WYPEŁNIA URZĄD SKARBOWY. WYPEŁNIAĆ
+					MASZYNIE, KOMPUTEROWO LUB RĘCZNIE DUŻYMI, DRUKOWANYMI LITERAMI, CZARNYM LUB NIEBIESKIM KOLOREM.  
+				</div>
+				<hr style="clear: both;">
+				
+				<div class="c_37 grey borders">
+					<h3>C. DOCHODY / STRATY ZE ŹRÓDEŁ PRZYCHODÓW</h3>
+				</div>
+				
+				<div class="c1_37 grey borders">
+					<h3>C.1. DOCHODY I STRATY PODATNIKA</h3>
+				</div>
+				
+				<table id="tab1" class="tab white borders" border="1">
+					<tr>
+						<td class="a_37c"><p>Źródła przychodów</p></td>
+						<td class="b_37c"><p>Przychód</p></td>
+						<td class="c_37c"><p>Koszty uzyskania przychodów</p></td>
+						<td class="d_37c"><p>Dochód (b - c)</p></td>
+						<td class="e_37c"><p>Strata (c - b)</p></td>
+						<td class="f_37c"><p>Zaliczka pobrana przez płatnika</p></td>
+					</tr>
+					<tr>
+						<td class="a_37c"><p>a</p></td>
+						<td class="b_37c"><p>b</p></td>
+						<td class="c_37c"><p>c</p></td>
+						<td class="d_37c"><p>d</p></td>
+						<td class="e_37c"><p>e</p></td>
+						<td class="f_37c"><p>f</p></td>
+					</tr>
+					<tr>
+						<td class="a_37c" rowspan="2">
+							<b>1. Należności ze stosunku: pracy, służbowego,
+							 spółdzielczego i z pracy nakładczej, a także 
+							 zasiłki pieniężne z ubezpieczenia społecznego
+							 wypłacone przez zakład pracy,</b><br>
+							 W poz. 42 należy wykazać przychody, do których 
+							 w poz 43 podatnik stosuje 50% kosty uzyskania
+							  przychodów na podstawie art. 22 ust. 9 pkt 3 ustawy.</td>
+						<td class="b_37c">37.<p>{{ pkzds_P[0] }}</p></td>
+						<td class="c_37c">38.<p>{{ pkzds_P[12] }}</p></td>
+						<td class="d_37c" rowspan="2">39.<p>{{ pkzds_P[30] }}</p></td>
+						<td class="e_37c" rowspan="2">40.<p>{{ straty_P[0] }}</p></td>
+						<td class="f_37c" rowspan="2">41.<p>{{ pkzds_P[18] }}</p></td>
+					</tr>
+					<tr>
+						<td class="b_37c">42.<p>{{ pkzds_P[1] }}</p></td>
+						<td class="c_37c">43.<p>{{ pkzds_P[13] }}</p></td>
+					</tr>
+					<tr>
+						<td class="a_37c">2. Emerytury - renty oraz inne krajowe świadczenia, o których mowa w art. 34
+						ust. 7 ustawy</td>
+						<td class="b_37c">44.<p>{{ pkzds_P[2] }}</p></td>
+						<td class="c_37c grey"></td>
+						<td class="d_37c">45.<p>{{ pkzds_P[31] }}</p></td>
+						<td class="e_37c grey"></td>
+						<td class="f_37c">46.<p>{{ pkzds_P[19] }}</p></td>
+					</tr>
+					<tr>
+						<td class="a_37c">3. Działalność wykonywana osobiście, o której
+							 mowa w art. 13 ustawy (w tym umowy o dzieło i zlecenia)</td>
+						<td class="b_37c">47.<p>{{ pkzds_P[3] }}</p></td>
+						<td class="c_37c">48.<p>{{ pkzds_P[14] }}</p></td>
+						<td class="d_37c">49.<p>{{ pkzds_P[32] }}</p></td>
+						<td class="e_37c">50.<p>{{ straty_P[2] }}</p></td>
+						<td class="f_37c">51.<p>{{ pkzds_P[20] }}</p></td>
+					</tr>
+					<tr>
+						<td class="a_37c"rowspan="2"><b>4. Prawa autorskie i inne prawa, o których mowa 
+							 w art. 18 ustawy</b> <br>
+							 W poz. 57 należy wykazać przychody, do których w poz. 58 podatnik stosuje 50%
+							 koszty uzyskania przychodów na podstawie art. 22 ust. 9 pkt 1-3 ustawy</td>
+						<td class="b_37c">52.<p>{{ pkzds_P[4] }}</p></td>
+						<td class="c_37c">53.
+						<p></p>
+						</td>
+						<td class="d_37c"rowspan="2">54.<p>{{ pkzds_P[33] }}</p></td>
+						<td class="e_37c"rowspan="2">55.<p>{{ straty_P[3] }}</p></td>
+						<td class="f_37c"rowspan="2">56.<p>{{ pkzds_P[21] }}</p></td>
+					</tr>
+					<tr>
+						<td class="b_37c">57.<p>{{ pkzds_P[5] }}</p></td>
+						<td class="c_37c">58.<p>{{ pkzds_P[15] }}</p></td>
+					</tr>
+					<tr>
+						<td class="a_37c">5. Inne żródła, niewymienione w wierszach od 1 do 4</td>
+						<td class="b_37c">59.<p>pkzds_P[6:12]|sum</p></td>
+						<td class="c_37c">60.<p>pkzds_P[16:18]|sum</p></td>
+						<td class="d_37c">61.<p>pkzds_P[34]</p></td>
+						<td class="e_37c">62.<p>straty_P[4]</p></td>
+						<td class="f_37c">63.<p>pkzds_P[22:28]|sum</p></td>
+					</tr>
+					<tr>
+						<td class="a_37c">6. RAZEM<br>Suma kwot z wierszy od 1 do 5</td>
+						<td class="b_37c">64.<p>razemPKZD_P[0]</p></td>
+						<td class="c_37c">65.<p>razemPKZD_P[1]</p></td>
+						<td class="d_37c">66.<p>razemPKZD_P[3]</p></td>
+						<td class="e_37c grey"></td>
+						<td class="f_37c">67.<p>razemPKZD_P[2]</p></td>
+					</tr>
+				</table>
+				
+				<div class="c2_37 grey borders">
+					<h3>C.2. DOCHODY I STRATY MAŁŻONKA</h3>
+				</div>
+				
+				<table id="tab2" class="tab white" border="1" >
+					<tr>
+						<td class="a_37c"><p>Źródła przychodów</p></td>
+						<td class="b_37c"><p>Przychód</p></td>
+						<td class="c_37c"><p>Koszty uzyskania przychodów</p></td>
+						<td class="d_37c"><p>Dochód (b - c)</p></td>
+						<td class="e_37c"><p>Strata (c - b)</p></td>
+						<td class="f_37c"><p>Zaliczka pobrana przez płatnika</p></td>
+					</tr>
+					<tr>
+						<td class="a_37c"><p>a</p></td>
+						<td class="b_37c"><p>b</p></td>
+						<td class="c_37c"><p>c</p></td>
+						<td class="d_37c"><p>d</p></td>
+						<td class="e_37c"><p>e</p></td>
+						<td class="f_37c"><p>f</p></td>
+					</tr>
+					<tr>
+						<td class="a_37c" rowspan="2">
+							<b>1. Należności ze stosunku: pracy, służbowego,
+							 spółdzielczego i z pracy nakładczej, a także 
+							 zasiłki pieniężne z ubezpieczenia społecznego
+							 wypłacone przez zakład pracy, </b><br>
+							 W poz. 73 należy wykazać przychody, do których w poz 74 małżonek
+							 stosuje 50% koszty uzyskania
+							 przychodów na podstawie art. 22 ust. 9 pkt 3 ustawy.</td>
+						<td class="b_37c">68.<p>{{ pkzds_M[0] }}</p></td>
+						<td class="c_37c">69.<p>{{ pkzds_M[12] }}</p></td>
+						<td class="d_37c" rowspan="2">70.<p>{{ pkzds_M[30] }}</p></td>
+						<td class="e_37c" rowspan="2">71.<p>{{ straty_M[0] }}</p></td>
+						<td class="f_37c" rowspan="2">72.<p>{{ pkzds_M[18] }}</p></td>
+					</tr>
+					<tr>
+						<td class="b_37c">73.<p>{{ pkzds_M[1] }}</p></td>
+						<td class="c_37c">74.<p>{{ pkzds_M[13] }}</p></td>
+					</tr>
+					<tr>
+						<td class="a_37c">2. Emerytury - renty oraz inne krajowe świadczenia, o których mowa w art. 34
+						ust. 7 ustawy</td>
+						<td class="b_37c">75.<p>{{ pkzds_M[2] }}</p></td>
+						<td class="c_37c grey"></td>
+						<td class="d_37c">76.<p>{{ pkzds_M[31] }}</p></td>
+						<td class="e_37c grey"></td>
+						<td class="f_37c">77.<p>{{ pkzds_M[19] }}</p></td>
+					</tr>
+					<tr>
+						<td class="a_37c">3. Działalność wykonywana osobiście, o której
+							 mowa w art. 13 ustawy (w tym umowy o dzieło i zlecenia)</td>
+						<td class="b_37c">78.<p>{{ pkzds_M[3] }}</p></td>
+						<td class="c_37c">79.<p>{{ pkzds_M[14] }}</p></td>
+						<td class="d_37c">80.<p>{{ pkzds_M[32] }}</p></td>
+						<td class="e_37c">81.<p>{{ straty_M[2] }}</p></td>
+						<td class="f_37c">82.<p>{{ pkzds_M[20] }}</p></td>
+					</tr>
+					<tr>
+						<td class="a_37c"rowspan="2"><b>4. Prawa autorskie i inne prawa, o których mowa 
+							 w art. 18 ustawy</b> <br>
+							 W poz. 57 należy wykazać przychody, do których w poz. 58 podatnik stosuje 50%
+							 koszty uzyskania przychodów na podstawie art. 22 ust. 9 pkt 1-3 ustawy</td>
+						<td class="b_37c">83.<p>{{ pkzds_M[4] }}</p></td>
+						<td class="c_37c">84.<p></p></td>
+						<td class="d_37c"rowspan="2">85.<p>{{ pkzds_M[33] }}</p></td>
+						<td class="e_37c"rowspan="2">86.<p>{{ straty_M[3] }}</p></td>
+						<td class="f_37c"rowspan="2">87.<p>{{ pkzds_M[21] }}</p></td>
+					</tr>
+					<tr>
+						<td class="b_37c">88.<p>{{ pkzds_M[5] }}</p></td>
+						<td class="c_37c">89.<p>{{ pkzds_M[15] }}</p></td>
+					</tr>
+					<tr>
+						<td class="a_37c">5. Inne żródła, niewymienione w wierszach od 1 do 4</td>
+						<td class="b_37c">90.<p>pkzds_M[6:12]|sum</p></td>
+						<td class="c_37c">91.<p>pkzds_M[16:18]|sum</p></td>
+						<td class="d_37c">92.<p>pkzds_M[34]</p></td>
+						<td class="e_37c">93.<p>straty_M[4]</p></td>
+						<td class="f_37c">94.<p>pkzds_M[22:28]|sum</p></td>
+					</tr>
+					<tr>
+						<td class="a_37c">6. RAZEM<br>Suma kwot z wierszy od 1 do 5</td>
+						<td class="b_37c">95.<p>azemPKZD_M[0]</p></td>
+						<td class="c_37c">96.<p>razemPKZD_M[1]</p></td>
+						<td class="d_37c">97.<p>razemPKZD_M[3]</p></td>
+						<td class="e_37c grey"></td>
+						<td class="f_37c">98.<p>azemPKZD_M[2]</p></td>
+					</tr>
+				</table>
+				
+				
+				<div class="d_37 grey borders">
+					<div class="h3_odliczenia"><h3>D. ODLICZENIA OD DOCHODU</h3></div>
+					<div class="p_podatnik"><p>podatnik</p></div>
+					<div class="p_malzonek"><p>małżonek</p></div>
+					<div style="clear: both;"></div>
+					
+					<div class="pole_dlugie1">
+					<b>Składki na ubezpieczenia społeczne</b><br>
+					Odliczenie podatnika nie może przekroczyć kwoty z poz. 66 <br>
+					Odliczenie małżonka nie może przekroczyć kwoty z poz. 97
+					</div>
+					<div class="d_podatnik_i_mal white">99.<p>{{ pkzds_P[28] }}</p></div>
+					<div class="d_podatnik_i_mal white">100.<p>{{ pkzds_M[28] }}</p></div>
+					<div style="clear: both;"></div>
+					
+					<div class="pustak"></div>
+					<div class="pole_dlugie2">w tym zagraniczne, o których mowa w art. 26 ust. 1 pkt 2a ustawy</div>
+					<div class="d_podatnik_i_mal white">101.</div>
+					<div class="d_podatnik_i_mal white">102.</div>
+					<div style="clear: both;"></div>
+					
+					<div class="pole_dlugie1"> <b>Dochód po odliczeniu składek na ubezpieczenia społeczne</b><br>
+					Dochód podatnika - od kwoty z poz. 66 należy odjąć kwotę z poz. 99 <br>
+					Dochód małżonka - od kwoty z poz. 97 należy odjąć kwotę z poz. 100</div>
+					<div class="d_podatnik_i_mal white">103.<p>{{ odliczenia_P[0] }}</p></div>
+					<div class="d_podatnik_i_mal white">104.<p>{{ odliczenia_M[0] }}</p></div>
+					<div style="clear: both;"></div>
+					
+					<div class="pole_dlugie1"><b> Odliczenia od dochodu – wykazane w części B załącznika PIT/O </b><br>
+					Odliczenie podatnika nie może przekroczyć kwoty z poz. 103<br>
+					Odliczenie małżonka nie może przekroczyć kwoty z poz. 104</div>
+					
+					<div class="d_podatnik_i_mal white">105.<p>{{ odliczenia_P[1] }}</p></div>
+					<div class="d_podatnik_i_mal white">106.<p>{{ odliczenia_M[1] }}</p></div>
+					<div style="clear: both;"></div>
+					
+					<div class="pole_dlugie1">
+						<b> Ulga odsetkowa - wykazana w części B.1 załącznika PIT/D</b><br>
+						 Kwota z poz.107 nie może przekroczyć sumy kwot z poz. 103 i 104 pomniejszonej o kwoty z poz. 105 i 106
+					 </div>
+					<div class="jedno_pole white">107.</div>
+					<div style="clear: both;"></div>
+					
+					<div class="pole_dlugie1"><b> Odliczenia od dochodu wydatków mieszkaniowych– wykazane w części B.3. załącznika <br>PIT/D</b>
+					</div>
+					<div class="jedno_pole white">108.</div>
+					<div style="clear: both;"></div>
+					
+					<div class="pustak2"></div>
+					<div class="pole_dlugie3"><b>Wydatki mieszkaniowe do odliczenia w roku podatkowym</b><br>
+						 Jeżeli kwota z poz.108 jest większa od sumy kwot z poz.103 i 104 pomniejszonej o kwoty z poz.105, 106 i 107, 
+						 należy wpisać sumę kwot z poz.103 i 104 pomniejszoną o kwoty z poz.105, 106 i 107; w przeciwnym wypadku 
+						 należy wpisać kwotę z poz108
+					 </div>
+					 <div class="jedno_pole white">109.</div>
+					 <div style="clear: both;"></div>
+					 
+					<div class="pustak3"></div>
+					<div class="pustak4"></div>
+					<div class="pole_dlugie4">
+						<b> Wydatki mieszkaniowe do odliczenia w latach następnych</b><br>
+							Od kwoty z poz.108 należy odjąć kwotę z poz.109.
+					</div>
+					<div class="jedno_pole white">110.</div>
+					<div style="clear: both;"></div>
+					
+					<div class="pole_dlugie1">
+						<b>Dochód po odliczeniach</b><br>
+						 Od sumy kwot z poz.103 i 104 należy odjąć sumę kwot z poz.105, 106, 107 i 109.
+					 </div>
+					<div class="jedno_pole white">
+						111.<p>{{ odliczenia_P[2] + odliczenia_M[2] }}</p>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+				
+				<div class="endPage2 borders">
+					<div class="page1">PIT-37<sub>(20)</sub></div>
+					<div class="page2">2<sub>/4</sub></div>
+				</div>
+				<div style="clear: both;"></div>
+				
+			</div><!-- /page two -->
+			
+			<div id="page_three">
+				
+				<div class="poltax37"><p>POLTAX</p></div>
+					<div class="poltax37_two">POLA JASNE WYPEŁNIA PŁATNIK, POLA CIEMNE WYPEŁNIA URZĄD SKARBOWY. WYPEŁNIAĆ
+						MASZYNIE, KOMPUTEROWO LUB RĘCZNIE DUŻYMI, DRUKOWANYMI LITERAMI, CZARNYM LUB NIEBIESKIM KOLOREM.  
+					</div>
+					<hr style="clear: both;">
+					
+				<div class="e_37 grey borders">
+					<h3>E. OBLICZANIE PODATKU</h3>
+					<div class="e_37_p pole_dlugie1">
+						<b>Podstawa obliczenia podatku</b> (po zaokrągleniu do pełnych złotych)<br>
+						 Jeżeli w poz. 6 zaznaczono kwadrat nr 1, należy wpisać kwotę z poz. 111; w pozostałych przypadkach
+						 należy wpisać połowę kwoty z poz. 111
+					 </div>
+					<div class="e_37_i jedno_pole white">
+						112.<p>{{ obliczaniePodatku[0] }}</p>
+					</div>
+					<div class="e_37_p pole_dlugie1">
+						<b> Obliczony podatek - zgodnie z art. 27 ust. 1 ustawy</b><br>
+						 Podatek od podstawy z poz. 112; jeżeli w poz. 6 zaznaczono kwadrat nr 2, 3 albo 4, tak obliczony
+						 podatek należy pomnożyć przez dwa; jeżeli wynik jest liczbą ujemną należy wpisać 0
+					</div>
+					<div class="e_37_i jedno_pole white">
+						113.<p>{{ obliczaniePodatku[1] }}</p>
+					</div>
+					<div class="e_37_p pole_dlugie1">
+						<b>Doliczenia do podatku</b>
+					</div>
+					<div class="e_37_i jedno_pole white">
+						114.<p></p>
+					</div>
+					<div class="e_37_p pole_dlugie1">
+						<b>Podatek</b><br>
+						 Do kwoty z poz. 113 należy dodać kwotę z poz. 114
+					 </div>
+					<div class="e_37_i jedno_pole white">
+						115.<p>{{ obliczaniePodatku[3] }}</p>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+				
+				<div class="f_37 grey borders">
+					<div class="h3_odliczenia"><h3>F. ODLICZENIA OD PODATKU</h3></div>
+						<div class="p_podatnik"><p>podatnik</p></div>
+						<div class="p_malzonek"><p>małżonek</p></div>
+						
+						<div class="pole_dlugie1">
+							<b>Składki na ubezpieczenia zdrowotne</b><br>
+							 Suma kwot z poz. 116 i 117 nie może przekroczyć kwoty z poz. 115
+						</div>
+						<div class="d_podatnik_i_mal white">116.<p>{{ pkzds_P[29] }}</p></div>
+						<div class="d_podatnik_i_mal white">117.<p>{{ pkzds_M[29] }}</p></div>
+						<div style="clear: both;"></div>
+						
+						<div class="pustak"></div>
+						<div class="pole_dlugie2">
+							w tym zagraniczne, o których mowa w art. 27b ust. 1 pkt 2 ustawy
+						</div>
+						<div class="d_podatnik_i_mal white">118.</div>
+						<div class="d_podatnik_i_mal white">119.</div>
+						<div style="clear: both;"></div>
+						
+						<div class="pole_dlugie1">
+							<b> Odliczenia od podatku – wykazane w części C załącznika PIT/O</b><br>
+							 Suma odliczanych kwot nie może przekroczyć podatku z poz. 115 pomniejszonego o sumę kwo z poz. 116 i 117.
+						 </div>
+						<div class="d_podatnik_i_mal white">120.<p>{{ kwotaUlgiNaDzieci_P }}</p></div>
+						<div class="d_podatnik_i_mal white">121.<p>kwotaUlgiNaDzieci_M</p></div>
+						<div style="clear: both;"></div>
+						
+						<div class="pole_dlugie1">
+							<b> Podatek po odliczeniach</b><br>
+							 Od kwoty z poz. 115 należy odjąć sumę kwot z poz. 116, 117, 120 i 121
+						 </div>
+						<div class="jedno_pole white">122.<p>{{ obliczaniePodatku[4] }}</p></div>
+						<div style="clear: both;"></div>
+						
+						<div class="pole_dlugie1">
+							<b> Odliczenia od podatku wydatków mieszkaniowych – wykazane w części C.2 załącznika PIT/D</b>
+						</div>
+						<div class="jedno_pole white">123.</div>
+						<div class="pustak2"></div>
+						<div class="pole_dlugie3">
+							<b> Ulgi mieszkaniowe do odliczenia w roku podatkowym</b><br>
+								  Jeżeli kwota z poz. 123 jest większa od kwoty z poz. 122, należy wpisać kwotę z poz. 122 w przeciwnym 
+								  wypadku należy wpisać kwotę z poz. 123
+						</div>
+						<div class="jedno_pole white">124.</div>
+						<div class="pustak3"></div>
+						<div class="pustak4"></div>
+						<div class="pole_dlugie4">
+							<b> Ulgi mieszkaniowe do odliczenia w latach następnych</b><br>
+							 Od kwoty z poz. 123 należy odjąć kwotę z poz. 124
+						</div>
+						<div class="jedno_pole white">125.</div>
+						<div style="clear: both;"></div>
+				</div>
+				
+				<div class="g_37 grey borders">
+					<h3>G. OBLICZENIE ZOBOWIĄZANIA PODATKOWEGO</h3>
+					<div class="pole_dlugie1">
+						<b> Podatek należny</b> (po zaokrągleniu do pełnych złotych)<br>
+						  Od kwoty z poz.122 należy odjąć kwotę z poz.124
+					</div>
+					<div class="jedno_pole white">
+						126.<p>{{ obliczaniePodatku[5] }}</p>
+					</div>
+					<div class="pole_dlugie1">
+						<b> Suma zaliczek pobranych przez płatników</b><br>
+						 Suma kwot z poz. 67 i 98.
+					 </div>
+					<div class="jedno_pole white">
+						127.<p>{{ razemPKZD_P[2] + razemPKZD_M[2] }}</p>
+					</div>
+					<div class="pole_dlugie1">
+						<b> Różnica pomiędzy podatkiem należnym a sumą zaliczek pobranych przez płatników</b>
+						<b> DO ZAPŁATY</b><br>
+						 Od kwoty z poz.126 należy odjąć kwotę z poz.127. Jeżeli różn. jest liczbą ujemną należy wpisać 0
+					 </div>
+					<div class="jedno_pole">
+						128.<p>{{ obliczaniePodatku[6] }}</p>
+					</div>
+					<div class="pole_dlugie1">
+						<b> Różnica pomiędzy sumą zaliczek pobranych przez płatników a podatkiem należnym</b>
+						 <b>NADPŁATA</b><br>
+						 Od kwoty z poz.127 należy odjąć kwotę z poz.126. Jeżeli różn. jest liczbą ujemną należy wpisać 0
+					 </div>
+					<div class="jedno_pole">
+						129.<p>{{ obliczaniePodatku[7] }}</p>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+				
+				<div class="h_37 gre borders">
+					<div class="h_info"><h3>H. INFORMACJA O DOCHODACH (PRZYCHODACH)<br>
+					WYKAZYWANYCH NA PODSTAWIE ART. 45 UST. 3c USTAWY</h3></div>
+					<div class="h_info130 white">130. Kwota dochodów (przychodów)</div>
+					<div style="clear: both;"></div>
+				</div>
+				
+				<div class="i_37 grey borders">
+					<h3> I. WNIOSEK O PRZEKAZANIE 1% PODATKU NALEŻNEGO NA RZECZ ORGANIZACJI POŻYTKU
+					 PUBLICZNEGO (OPP) <small>
+					 Należy podać numer wpisu do Krajowego Rejestru Sądowego (numer KRS) organizacji wybranej z wykazu prowadzonego przez Ministra Pracy i Polityki Społecznej oraz wysokość kwoty na jej rzecz.</small></h3> 
+					 <div class="i_krs white">131. Numer KRS
+						<p>{{ jedenProcent[0] }}</p>
+					 </div>
+					 <div class="i_krs2">
+						 <b>Wnioskowana kwota</b><br>
+						 Kwota z poz. 132 nie może przekroczyć 1% kwoty z poz. 126, <br>
+						 po zaokrągleniu do pełnych dziesiątek groszy w dół
+					 </div>
+					 <div class="i_krs132 white">132.
+					 <p>
+					 <!--{% if jedenProcent[0] != '' %}
+						{{ (obliczaniePodatku[5] * 0.01)|round(1, 'floor') }}-->
+					 </p>
+					 </div>
+					 <div style="clear: both;"></div>
+				</div>
+				
+				<div class="j_37 grey borders">
+					<h3> J. INFORMACJE UZUPEŁNIAJĄCE <small>Podatnicy, którzy wypełnili częśćI, w poz. 133  mogą podać cel szczegółowy 1%,
+					a zaznaczając kwadrat w poz. 134 wyrazićzgodęna przekazanie OPP swojego imienia,  nazwiska i adresu wraz z 
+					informacjąo kwocie z poz.132. W poz. 135 można podać dodatkowe informacje, np. ułatwiające kontakt z podatnikiem (telefon, e-mail).</small></h3>
+					<div class="j_cel133 white">133. Cel szczegółowy 1%
+						<p>{{ jedenProcent[1] }}</p>
+					</div>
+					<div class="j_cel134 white">134. Wyrażam zgodę</div>
+					<div class="j_cel135 white">135.</div>
+					<div style="clear: both;"></div>
+				</div>
+				
+				<div class="k_37 grey borders">
+					<h3>K. INFORMACJE O DOŁĄCZONYCH DOKUMENTACH / ZAŁĄCZNIKACH
+					<small>W poz. 136-140 należy podać liczbę załączników. Poz. 141 i 142 wypełniają podatnicy, którzy załącznik PIT/D 
+					dołączyli do innego niż składane zeznanie. Jeżeli w poz. 141 zaznaczono kwadrat nr 2, należy wypełnić poz. 143.</small></h3>
+					<div class="k_pit k_pit_first">
+						<div class="k_pit_up"><p>PIT/UZ</p></div>
+						<div class="k_pit_bot white">136.
+							<!--{% if pitUZ %}
+								<p>1</p>
+							{% else %}
+								<p>0</p>
+							{% endif %}-->
+						</div>
+					</div>
+					<div class="k_pit">
+						<div class="k_pit_up"><p>PIT/O</p></div>
+						<div class="k_pit_bot white">137.
+							<!--{% if pitO %}
+								<p>1</p>
+							{% else %}
+								<p>0</p>
+							{% endif %}-->
+						</div>
+					</div>
+					<div class="k_pit">
+						<div class="k_pit_up"><p>PIT/D</p></div>
+						<div class="k_pit_bot white">138.
+							<p>0</p>
+						</div>
+					</div>
+					<div class="k_pit">
+						<div class="k_pit_up"><p>PIT-2K</p></div>
+						<div class="k_pit_bot white">139.
+							<p>0</p>
+						</div>
+					</div>
+					<div class="k_pit2">
+						<div class="k_pit_up">Certyfikat rezydencji</div>
+						<div class="k_pit_bot white">140.
+							<p>0</p>
+						</div>
+					</div>
+					<div class="k_pit3 white">141. Załącznik PIT/D dołącza do swojego zeznania:
+						<p><i class="icon-check-empty"></i> 1. podatnik <i class="icon-check-empty"></i>2. małżonek</p>
+					</div>
+					<div class="k_pit4 white">142. Kod formularza, do którego został dołączony załącznik PIT/D:
+						<p><i class="icon-check-empty"></i>1. PIT-28 <i class="icon-check-empty"></i>2. PIT-36 <i class="icon-check-empty"></i>3. PIT-37</p>
+					</div>
+					<div style="clear: both;"></div>
+					<div class="k_pit5 white">
+						143. Identyfikator podatkowy, nazwisko i imię młżonka oraz urząd, do którego został złożony załącznik PIT/D
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+				
+				<div class="endPage borders">
+					<div class="page1">PIT-37<sub>(20)</sub></div>
+					<div class="page2">3<sub>/4</sub></div>
+				</div>
+				<div style="clear: both;"></div>
+				
+			</div><!-- /page three -->
+			
+			<div id="page_four">
+			
+				<div class="poltax37"><p>POLTAX</p></div>
+				<div class="poltax37_two">POLA JASNE WYPEŁNIA PŁATNIK, POLA CIEMNE WYPEŁNIA URZĄD SKARBOWY. WYPEŁNIAĆ
+					MASZYNIE, KOMPUTEROWO LUB RĘCZNIE DUŻYMI, DRUKOWANYMI LITERAMI, CZARNYM LUB NIEBIESKIM KOLOREM.  
+				</div>
+				<hr style="clear: both;">
+				
+				<div class="l_37 grey borders">
+					<h3>L. OŚWIADCZENIE I PODPIS PODATNIKA / MAŁŻONKA / PEŁNOMOCNIKA <br>
+					<small>W przypadku zaznaczenia w poz. 6 kwadratu nr 2, 3 albo 4, kwadratu w poz. 7 lub w poz. 8, oświadczam, iż spełnione są 
+					warunki do opodatkowania dochodów w wybrany sposób. W przypadku zastosowania art. 6 ust. 2a ustawy, oświadczam 
+					pod rygorem odpowiedzialności karnej za fałszywe zeznanie, że spełniony jest warunek przewidziany w tym przepisie. </small></h3>
+					<div class="podpis1 white">144. Podpis podatnika</div>
+					<div class="podpis2 white">145. Podpis małżonka</div>
+					<div class="pelnomocnik white">146. Imię i nazwisko oraz podpis pełnomocnika</div>
+					<div style="clear: both;"></div>
+				</div>
+				
+				<div class="m_37 grey borders">
+					<h3>M. ADNOTACJE URZĘDU</h3>
+					<div class="m_iden_147">147. Identyfikator przyjmującego formularz</div>
+					<div class="m_podpis_148">148. Podpis przyjmującego formularz</div>
+					<div style="clear: both;"></div>
+				</div>
+				
+				<div class="m_pouczenia uwagi">
+					1)  Zgodnie z art. 81 ustawy z dnia 29 sierpnia 1997 r. - Ordynacja podatkowa (Dz. U. z 2012 r. poz. 749, z późn. zm.), 
+					podatnik może skorygować złożoną deklarację poprzez złożenie deklaracji korygującej wraz z dołączonym pisemnym 
+					uzasadnieniem przyczyn korekty.<br><br>
+					<b>Pouczenia </b><br>
+					W  przypadku  niewpłacenia  w  obowiązującym  terminie  kwoty  z  poz.  128  lub  wpłacenia  jej  w  niepełnej  wysokości  
+					niniejsze  zeznanie  stanowi  podstawędo  wystawienia tytułu wykonawczego, zgodnie z przepisami ustawy z dnia 17 czerwca
+					1966 r. o postępowaniu egzekucyjnym w administracji (Dz. U. z 2014 r. poz. 1619). Za podanie nieprawdy lub zatajenie prawdy
+					i przez to narażenie podatku na uszczuplenie grozi odpowiedzialność przewidziana w Kodeksie karnym skarbowym.
+				</div>
+				
+				<div class="endPage2 borders">
+					<div class="page1">PIT-37<sub>(20)</sub></div>
+					<div class="page2">4<sub>/4</sub></div>
+				</div>
+				<div style="clear: both;"></div>
+			
+			</div><!-- /page four -->
+			
+		</div><!-- /container -->
+	</div><!-- /pit37 -->
+
+</body>
+</html>

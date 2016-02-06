@@ -1,0 +1,82 @@
+{
+	"files": {
+		"_pit37.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "_pit37.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourcemap": true
+					}
+				}
+			],
+			"sources": [
+				"_colors.less",
+				"_pit37.less"
+			]
+		},
+		"_pitUZ.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "_pitUZ.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourcemap": true
+					}
+				}
+			],
+			"sources": [
+				"_pitUZ.less"
+			]
+		},
+		"_pitO.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "_pitO.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourcemap": true
+					}
+				}
+			],
+			"sources": [
+				"_pitO.less"
+			]
+		},
+		"_home.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "_home.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourcemap": true
+					}
+				}
+			],
+			"sources": [
+				"_colors.less",
+				"_home.less"
+			]
+		}
+	}
+}

@@ -9,21 +9,22 @@ function displayOn() {
 		document.getElementById("buttonToAction").style.display = "inline";
 		document.getElementById("pit11numberOne").style.display = "inline";
 	}
-	if ( parseInt( numberOfPits ) >= 2 ) {
-		document.getElementById("pit11NumberTwo").style.display = "inline";
-	}
-	if ( parseInt( numberOfPits ) >= 3 ) {
-		document.getElementById("pit11NumberThree").style.display = "inline";
-	}
-	if ( theWay == "wspolnie" || theWay == "wspolnie2" ) {
+	if ( theWay == "2" || theWay == "3" ) {
 		if ( parseInt( numberOfPitsWife ) >= 1 ) {
 			document.getElementById("pit11NumberOneWife").style.display = "inline";
-		}
-		if ( parseInt( numberOfPitsWife ) >= 2 ) {
-			document.getElementById("pit11NumberTwoWife").style.display = "inline";
-		}
-		if ( parseInt( numberOfPitsWife ) >= 3 ) {
-			document.getElementById("pit11NumberThreeWife").style.display = "inline";
+			document.getElementById("pit11malzonek").style.display = "inline";
 		}
 	}
 }
+
+function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+

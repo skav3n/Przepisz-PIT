@@ -1,216 +1,134 @@
-.pit_o {
+#pit_o {
     font-size: 12px;
     margin-top: 5px;
     margin-bottom: 5px;
-    p {
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    margin: 0px;
-    font-size: 16px;
-    text-align: center;
-    }
-    h3 {
-        margin: 0px;
-        font-size: 18px;
-        padding-left: 5px;
-    }
+}
+#pit_o_page_one {
+    height: 1400px;
 }
 
-.pit_o_top {
-    border: solid;
-	border-width: 1px;
-	margin-top: 75px;
-	.poltax37 {
-	    width: 10%;
-	    float: left;
-	    p {font-size: 18px;}
-	}
-	.poltax_two37 {
-	    width: 90%;
-	    float: left;
-	    p {font-size: 12px; text-align: left;}
-	}
-}
-.pit_o_pesel {
-    border: solid;
-	border-width: 1px;
+.pit_pesel {
+    border: 2px solid black;
 	float: left;
-	width: 468px;
-	height: 50px;
+	width: 50%;
+	height: 45px;
 }
+
 .pit_o_two {
-    .pit_o_a {
-        float: left;
-        width: 100%;
+    .pit_o_informacja {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        p {
+            font-size: 18px;
+        }
     }
     .pit_o_d {
         float: left;
-        width: 350px;
-        p {text-align: right; margin-top: 8px;}
+        margin-left: 15%;
+        width: 24%;
     }
     .pit_o_e {
         float: left;
-        border: solid;
-    	border-width: 1px;
-    	width: 150px;
+    	width: 15%;
     }
     .pit_o_f {
-        float: right;
-        border: solid;
-    	border-width: 1px;
-    	width: 150px;
-    	margin-right: 40px;
+        float: left;
+    	width: 21%;
+    	margin-left: 25%;
     }
 }
 .pit_o_zalacznik {
-    border: solid;
-	border-width: 1px;
-	margin-top: 25px;
-	margin-bottom: 5px;
+    font-size: 12px;
+    margin-top: 15px;
 }
-.pit_o_dane {
-    border: solid;
-	border-width: 1px;
-	.pit_o_a1 {
-	    float: left;
-	    border-left: solid;
-        border-top: solid;
-        border-width: 1px;
-        width: 100%;
-        .pit_o_nazwisko {
-            float: left;
-    	    border-left: solid;
-            border-top: solid;
-            border-width: 1px;
-            margin-left: 25px;
-            width: 33%;
-            height: 50px;
-        }
-        .pit_o_imie {
-            float: left;
-    	    border-left: solid;
-            border-top: solid;
-            border-width: 1px;
-            width: 32%;
-            height: 50px;
-        }
-	}
+.pit_dane {
+    float: left;
+    width: 100%;
 }
-.pit_o_b_odliczenia {
-    border: solid;
-	border-width: 1px;
-	table#pit_o_table_1 {
-	    width: 913px;
-	    margin-left: 25px;
-	    border-spacing: 0px;
-	    td {
-	        width: 182px; 
-	        border-top: solid;
-	        border-left: solid;
-	        border-width: 1px;
-	   }
-	}
+.pit_dane_1 {
+    float: left;
+    margin-left: 4%;
+    width: 32%;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    min-height: 45px;
 }
-.pit_o_c_odliczenia {
-    border: solid;
-	border-width: 1px;
-	.pit_o_c_instr {
-	    float: left;
-	    width: 40%;
-	    margin-left: 5%;
-	    margin-right: 5%;
-	}
-	table#pit_o_table_2 {
-	    width: 913px;
-	    margin-left: 25px;
-	    border-spacing: 0px;
-	    td {
-	        width: 182px; 
-	        border-top: solid;
-	        border-left: solid;
-	        border-width: 1px;
-	   }
-	}
+.pit_dane_2 {
+    float: left;
+    width: 32%;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    min-height: 45px;
 }
+
+#pit_o_table_1,
+#pit_o_table_2,
+#pit_o_table_3 {
+    width: 96%;
+    margin-left: 4%;
+    border-collapse: collapse;
+    font-size: 12px;
+    td {
+        padding: 2px;
+        width: 20%;
+        height: 45px;
+    }
+}
+.uwagi {
+    font-size: 12px;
+    padding: 5px;
+}
+
+.pit_o_c_instr {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
 .pit_o_d_darowizny {
-    border: solid;
-	border-width: 1px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-.pit_o_e_dzieci {
-    border: solid;
-	border-width: 1px;
-	margin-bottom: 20px;
+
+.pit_o_dziecko {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+	float: right;
+	width: 48%;
+	min-height: 30px;
 }
-.pit_o_e1_dziecko {
-    border: solid;
-	border-width: 1px;
-	.pit_o_e1_pesel {
-	    border-top: solid;
-	    border-left: solid;
-    	border-width: 1px;
-    	float: left;
-    	margin-left: 25px;
-    	width: 455px;
-    	height: 40px;
-	}
-	.pit_o_e1_imie {
-	    border-top: solid;
-	    border-left: solid;
-    	border-width: 1px;
-    	float: left;
-    	width: 454px;
-    	height: 40px;
-	}
-	.pit_o_e1_nazwisko {
-	    border-top: solid;
-	    border-left: solid;
-    	border-width: 1px;
-    	float: left;
-    	margin-left: 25px;
-    	width: 609px;
-    	height: 40px;
-	}
-	.pit_o_e1_data {
-	    border-top: solid;
-	    border-left: solid;
-    	border-width: 1px;
-    	float: left;
-    	width: 300px;
-    	height: 40px;
-	}
-	table#pit_o_table_3 {
-	    width: 912px;
-	    margin-left: 25px;
-	    border-spacing: 0px;
-	    td {
-	        width: 182px; 
-	        border-top: solid;
-	        border-left: solid;
-	        border-width: 1px;
-	   }
-	}
+.pit_o_e1_nazwisko {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+	float: left;
+	margin-left: 4%;
+	width: 60%;
+	min-height: 30px;
 }
-#pit_o_e1_kwoty {
-	.kwota_podatnik {
-		float: left;
-		width: 362px;
-		height: 35px;
-		margin-left: 212px;
-		border-top: solid;
-		border-left: solid;
-		border-width: 1px;
-	}
-	.kwota_malzonek {
-		float: left;
-		width: 362px;
-		height: 35px;
-		border-top: solid;
-		border-left: solid;
-		border-width: 1px;
-	}
+.pit_o_e1_data {
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+	float: left;
+	width: 36%;
+	min-height: 30px;
 }
+
+.kwota_podatnik {
+	float: left;
+	width: 39%;
+	min-height: 40px;
+	margin-left: 22%;
+	border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+.kwota_malzonek {
+	float: left;
+	width: 39%;
+	min-height: 40px;
+	border-top: 1px solid black;
+    border-left: 1px solid black;
+}
+
+
 

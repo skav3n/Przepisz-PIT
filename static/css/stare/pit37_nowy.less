@@ -1,7 +1,5 @@
-@import "_colors.less";
-
 * {
-    padding: 0;
+	padding: 0;
 	margin: 0;
 	font-family: 'Lato', sans-serif;
 	box-sizing: border-box;
@@ -14,57 +12,31 @@
 	margin-right: auto;
     font-size: 10px;
     h3 {
-    	font-size: 15px;
-    	padding: 4px;
+    	font-size: 16px;
+    	padding: 8px;
 	}
     p {
-    	font-size: 13px;
+    	font-size: 14px;
     	text-align: center;
-    	padding-top: 1px;
-    	padding-bottom: 1px;
+    	padding-top: 4px;
+    	padding-bottom: 4px;
     }
     .borders {
-    	border: 2px solid black;
+    	border: 1px solid black;
     }
-    
 }
 
-// PRINT BUTTONS
-button {
-    float: right;
-    width: 17%;
-    font-size: 16px;
-    padding: 10px;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    background-color: white;
-    color: black;
-    border: 1px solid black;
-    font-weight: bold;
-}
-button:hover {
-    transition: 0.65s;
-    color: white;
-    background-color: @orange;
-    border: 1px solid white;
-}
-
-// SHEET NUMBERS
 .endPage {
 	width: 20%;
 	float: right;
-	margin-top: 15px;
-	margin-bottom: 25px;
+	margin-top: 25px;
 	text-align: center;
 	font-size: 16px;
 }
 .endPage2 {
 	width: 20%;
 	float: left;
-	margin-top: 15px;
-	margin-bottom: 25px;
+	margin-top: 25px;
 	text-align: center;
 	font-size: 16px;
 }
@@ -80,28 +52,22 @@ button:hover {
 	padding: 10px;
 }
 
-// SHEET HEADER
-.poltax_header {
-    float: left;
-    .poltax37 {
-        float: left;
-    	width: 10%;
-    }
-    .poltax37_two {
-        float: left;
-    	width: 90%;
-    	font-size: 12px;
-    }
+.poltax37 {
+	float: left;
+	width: 10%;
 }
-
-// HEIGHT OF PAGES
+.poltax37_two {
+	float: left;
+	width: 90%;
+	font-size: 12px;
+}
 #page_one,
 #page_two,
 #page_three {
     height: 1400px;
 }
 
-// WIDHT OF FORMS
+
 .h3_odliczenia {
 	float: left;
 	width: 62%;
@@ -118,14 +84,14 @@ button:hover {
 	width: 19%;
 	border-left: 1px solid black;
 	border-top: 1px solid black;
-	min-height: 42px;
+	min-height: 45px;
 }
 .jedno_pole {
 	float: left;
 	width: 38%;
 	border-left: 1px solid black;
 	border-top: 1px solid black;
-	min-height: 42px;
+	min-height: 45px;
 }
 .pole_dlugie1 {
     float: left;
@@ -135,7 +101,7 @@ button:hover {
 	border-top: 1px solid black;
 	padding-top: 2px;
 	padding-bottom: 3px;
-	min-height: 42px;
+	min-height: 45px;
 }
 
 /*----------------------------------------------------------------
@@ -157,8 +123,7 @@ button:hover {
 	height: 80px;
 }
 .three37 {
-	padding: 3px;
-	background-color: @orange;
+	padding: 5px;
 	.name1 {
 		font-size: 26px;
 		width: 10%;
@@ -199,8 +164,8 @@ button:hover {
 	}
 }
 .podstawyPrawne {
-	font-size: 12px;
-	padding: 2px;
+	font-size: 14px;
+	padding: 5px;
 	.pod {
 		float: left;
 		width: 15%;
@@ -213,21 +178,14 @@ button:hover {
 	}
 }
 .wybor37 {
-	padding: 3px;
+	padding: 5px;
 	.form1 {
 		float: left;
 		width: 25%;
 		padding: 5px;
-		p {
-		    text-align: left;
-		}
 	}
 	.form2 {
-	    width: 100%;
 		padding: 5px;
-		p {
-		    text-align: left;
-		}
 	}
 }
 .a37 {
@@ -236,99 +194,89 @@ button:hover {
 		margin-left: 4%;
 		border-left: 1px solid black;
 		border-top: 1px solid black;
-		min-height: 40px;
 	}
 }
-
-.nazwisko11 {
-	margin-left: 4%;
-	border-top: 1px solid black;
-	border-left: 1px solid black;
-	width: 33%;
-	float: left;
-	min-height: 40px;
+.b1_37, .b2_37 {
+	.nazwisko11_37 {
+		margin-left: 4%;
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		width: 33%;
+		float: left;
+	}
+	.imie12_37 {
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		width: 35%;
+		float: left;
+	}
+	.data13_37 {
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		width: 28%;
+		float: left;
+	}
+	
+	.kraj14_37 {
+		margin-left: 4%;
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		width: 25%;
+		float: left;
+	}
+	.wojewodztwo15_37 {
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		width: 33%;
+		float: left;
+	}
+	.powiat16_37 {
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		width: 38%;
+		float: left;
+	}
+	
+	.gmina17_37 {
+		margin-left: 4%;
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		width: 26%;
+		float: left;
+	}
+	.ulica18_37 {
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		width: 50%;
+		float: left;
+	}
+	.dom19_37, .lokal20_37 {
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		width: 10%;
+		float: left;
+	}
+	
+	.miejscowosc21_37 {
+		margin-left: 4%;
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		width: 42%;
+		float: left;
+	}
+	.kod22_37 {
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		width: 15%;
+		float: left;
+	}
+	.poczta23_37 {
+		border-top: 1px solid black;
+		border-left: 1px solid black;
+		width: 39%;
+		float: left;
+	}
 }
-.imie12 {
-	border-top: 1px solid black;
-	border-left: 1px solid black;
-	width: 35%;
-	float: left;
-	min-height: 40px;
-}
-.data13 {
-	border-top: 1px solid black;
-	border-left: 1px solid black;
-	width: 28%;
-	float: left;
-	min-height: 40px;
-}
-.kraj14 {
-	margin-left: 4%;
-	border-top: 1px solid black;
-	border-left: 1px solid black;
-	width: 25%;
-	float: left;
-	min-height: 40px;
-}
-.wojewodztwo15 {
-	border-top: 1px solid black;
-	border-left: 1px solid black;
-	width: 33%;
-	float: left;
-	min-height: 40px;
-}
-.powiat16 {
-	border-top: 1px solid black;
-	border-left: 1px solid black;
-	width: 38%;
-	float: left;
-	min-height: 40px;
-}
-.gmina17 {
-	margin-left: 4%;
-	border-top: 1px solid black;
-	border-left: 1px solid black;
-	width: 26%;
-	float: left;
-	min-height: 40px;
-}
-.ulica18 {
-	border-top: 1px solid black;
-	border-left: 1px solid black;
-	width: 50%;
-	float: left;
-	min-height: 40px;
-}
-.dom19, .lokal20 {
-	border-top: 1px solid black;
-	border-left: 1px solid black;
-	width: 10%;
-	float: left;
-	min-height: 40px;
-}
-.miejscowosc21 {
-	margin-left: 4%;
-	border-top: 1px solid black;
-	border-left: 1px solid black;
-	width: 42%;
-	float: left;
-	min-height: 40px;
-}
-.kod22 {
-	border-top: 1px solid black;
-	border-left: 1px solid black;
-	width: 15%;
-	float: left;
-	min-height: 40px;
-}
-.poczta23 {
-	border-top: 1px solid black;
-	border-left: 1px solid black;
-	width: 39%;
-	float: left;
-	min-height: 40px;
-}
-
 
 /*----------------------------------------------------------------
 							Page 2
@@ -370,20 +318,20 @@ button:hover {
 	border-left: 1px solid black;
 	border-top: 1px solid black;
 	padding: 5px;
-	min-height: 42px;
+	min-height: 45px;
 }
 
 .pustak2 {
 	float: left;
 	margin-left: 4%;
 	width: 2%;
-	min-height: 42px;
+	min-height: 45px;
 	border-left: 1px solid black;
 }
 .pole_dlugie3 {
     width: 56%;
     float: left;
-    min-height: 42px;
+    min-height: 45px;
     border-left: 1px solid black;
 	border-top: 1px solid black;
 	font-size: 9px;
@@ -392,19 +340,19 @@ button:hover {
     float: left;
 	margin-left: 4%;
 	width: 2%;
-	min-height: 42px;
+	min-height: 45px;
 	border-left: 1px solid black;
 }
 .pustak4 {
     float: left;
 	width: 2%;
-	min-height: 42px;
+	min-height: 45px;
 	border-top: 1px solid black;
 }
 .pole_dlugie4 {
     width: 54%;
     float: left;
-    min-height: 42px;
+    min-height: 45px;
     border-left: 1px solid black;
 	border-top: 1px solid black;
 }
@@ -412,41 +360,16 @@ button:hover {
 /*----------------------------------------------------------------
 							Page 3
 ----------------------------------------------------------------*/
-
-.pit_uz_b_tile {
-    float: left;
-    width: 30%;
-    min-height: 45px;
-}
-
-#pit_uz_table_1 {
-    width: 96%;
-    margin-left: 4%;
-    border-collapse: collapse;
-    td {
-        border-left: 1px solid black;
-        border-top: 1px solid black;
-        padding: 1px;
-        width: 20%;
-    }
-    tr {
-        height: 35px;
-    }
-    .table_one {
-        width: 60%;
-    }
-}
-
 .h_info {
     float: left;
     width: 72%;
-    min-height: 50px;
+    min-height: 55px;
 }
 .h_info130 {
     float: left;
     width: 28%;
     border-left: 1px solid black;
-    min-height: 50px;
+    min-height: 55px;
 }
 
 small {
@@ -458,21 +381,21 @@ small {
     width: 38%;
     border-top: 1px solid black;
     border-left: 1px solid black;
-    min-height: 40px;
+    min-height: 42px;
 }
 .i_krs2 {
     float: left;
     width: 39%;
     border-top: 1px solid black;
     border-left: 1px solid black;
-    min-height: 40px;
+    min-height: 42px;
 }
 .i_krs132 {
     float: left;
     width: 19%;
     border-top: 1px solid black;
     border-left: 1px solid black;
-    min-height: 40px;
+    min-height: 42px;
 }
 .j_cel133 {
     float: left;
@@ -480,14 +403,14 @@ small {
     width: 77%;
     border-top: 1px solid black;
     border-left: 1px solid black;
-    min-height: 40px;
+    min-height: 42px;
 }
 .j_cel134 {
     float: left;
     width: 19%;
     border-top: 1px solid black;
     border-left: 1px solid black;
-    min-height: 40px;
+    min-height: 42px;
 }
 .j_cel135 {
     float: left;
@@ -495,14 +418,14 @@ small {
     margin-left: 4%;
     border-top: 1px solid black;
     border-left: 1px solid black;
-    min-height: 40px;
+    min-height: 42px;
 }
 .k_pit_first {
     margin-left: 4%;
 }
 .k_pit {
     float: left;
-    width: 9%;
+    width: 7%;
     border-top: 1px solid black;
     border-left: 1px solid black;
     min-height: 84px;
@@ -516,7 +439,7 @@ small {
 }
 .k_pit2 {
     float: left;
-    width: 10%;
+    width: 9%;
     border-top: 1px solid black;
     border-left: 1px solid black;
     min-height: 84px;
