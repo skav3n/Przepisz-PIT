@@ -2,17 +2,22 @@
                 Banner
 ====================================*/
 #banner {
-  margin: 25px 0;
-  background-image: url('../jpg/ship-banner.jpg');
+  margin: 25px 0 -40px 0;
+  /*
+    background-image: url('../jpg/ship-banner.jpg');
+    width: 100%;
+    height: 50vmin;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    */
+}
+#banner img {
   width: 100%;
-  height: 50vmin;
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 #banner #action-button {
   text-align: center;
   position: relative;
-  top: 50%;
+  top: -100px;
 }
 #banner #action-button a {
   text-decoration: none;
@@ -37,7 +42,7 @@
                 Content
 ====================================*/
 .tille1 {
-  margin: 25px 0;
+  margin: 0 0 25px 0;
   width: 100%;
   text-align: left;
 }

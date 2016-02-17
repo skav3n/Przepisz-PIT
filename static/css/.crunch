@@ -16,8 +16,8 @@
 				}
 			],
 			"sources": [
-				"_colors.less",
-				"_pit37.less"
+				"_pit37.less",
+				"_colors.less"
 			]
 		},
 		"_pitUZ.less": {
