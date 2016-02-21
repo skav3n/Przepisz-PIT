@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-def replace(value):
+def replaceValue(value):
     '''
     :param value: wartość z inputa wpisana przez użytkownika
     :return: liczbę o typie "float", albo 0 jeżeli zostanie wpisana niepoprawna wartość
@@ -13,89 +13,35 @@ def replace(value):
     try:
         return float(num.replace(',', '.'))
     except:
-        return 0
+        return 0.0
 
-def odliczeniaOdPrzychodu(kwota, odliczenia):
+def internet(value, total):
     '''
-    :param kwota: kwota odliczenia np. za internet
+    :param value: kwota odliczenia np. za internet
     :param odliczenia: dochód po odliczeniu składek społecznych
     :return: kwota internetu do odliczenia
     '''
     #sprawdzenie czy użytkownik nie wpisał większej kwoty niż 760
-    if kwota > 760:
-        kwota = 760
+    if value > 760:
+        value = 760
     #sprawdzenie czy kwota za internet nie przekracza dochodu po odliczeniu składek społecznych
-    if kwota > odliczenia:
-        kwota = odliczenia
-    return kwota
+    if value > total:
+        value = total
+    return value
 
-def liczPodatek(sposob, dochod, zaliczki, zdrowotna, ulgiNaDzieci=0):
+def kidsBenefit(kid, months):
     '''
-    :param sposob: sposób rozliczenia:
-        "1.0" indywidualnie
-        "2.0" wspólnie z małżonkiem
-        "3.0" wspólnie ze zmarłym małżonkiem
-        "4.0" osoba samotnie wychowująca dziecko
-    :param dochod: dochód podatnika po odjęciu odliczeń
-    :param zaliczki: zaliczki odprowadzone przez podatnika
-    :param ulgiNaDzieci: kwota zmniejszająca podatek
-    :return: listę różnych podatków
-    '''
-    kwotaWolna = 556.02
-    obliczaniePodatku = []
-    #Podstawa obliczania podatku [0]
-    if sposob == 1.0:
-        obliczaniePodatku.append(round(dochod))
-    else:
-        obliczaniePodatku.append(round((dochod / 2), 2))
-    #obliczanie podatku [1]
-    if obliczaniePodatku[0] <= 85528:
-        podatek = round((obliczaniePodatku[0] * 0.18 - kwotaWolna),2)
-        if podatek < 0:
-            podatek = 0.0
-        if sposob == 1.0:
-            obliczaniePodatku.append(podatek)
-        else:
-            obliczaniePodatku.append(podatek * 2)
-    else:
-        podatek = round(((obliczaniePodatku[0] * 0.18 - kwotaWolna) + (obliczaniePodatku[0] - 85528) * 0.32), 2)
-        if podatek < 0:
-            podatek = 0.0
-        if sposob == 1.0:
-            obliczaniePodatku.append(podatek)
-        else:
-            obliczaniePodatku.append(podatek * 2)
-    #doliczenia do podatku [2]
-    doliczeniaDoPodatku = 0.0
-    obliczaniePodatku.append(doliczeniaDoPodatku)
-    #"surowy" Podatek [3]
-    obliczaniePodatku.append(obliczaniePodatku[1] + obliczaniePodatku[2])
-    #Podatek minus składki zdrowotne i ulgi na dzieci [4]
-    obliczaniePodatku.append(round((obliczaniePodatku[3] - zdrowotna - ulgiNaDzieci), 2))
-    #Podatek należny [5]
-    obliczaniePodatku.append(round(obliczaniePodatku[4]))
-    #Podatek DO ZAPŁATY [6]
-    if (obliczaniePodatku[5] - zaliczki) > 0:
-        obliczaniePodatku.append(round(obliczaniePodatku[5] - zaliczki))
-    else:
-        obliczaniePodatku.append(0.0)
-    #Podatek NADPŁATA [7]
-    if (zaliczki - obliczaniePodatku[5]) > 0:
-        obliczaniePodatku.append(round(zaliczki - obliczaniePodatku[5]))
-    else:
-        obliczaniePodatku.append(0.0)
-    return obliczaniePodatku
-
-def liczUlgeNaDziecko(ktoreDzecko, ileMiesiecy):
-    '''
-    :param ktoreDzecko: od 3 dziecka przysługuje większa kwota odliczenia
-    :param ileMiesiecy: ilość miesięcy która przysługuje do odliczenia
+    :param kid: od 3 dziecka przysługuje większa kwota odliczenia
+    :param months: ilość miesięcy która przysługuje do odliczenia
     :return: kwotę odliczenia na jedno dziecko
     '''
-    kwotaNaDziecko1i2 = 92.67
-    kwotaNaDziecko3i4 = 166.67
-    if ktoreDzecko <= 2:
-        return round((kwotaNaDziecko1i2 * ileMiesiecy), 2)
+    kid1and2 = 92.67
+    kid3 = 166.67
+    kid4plus = 225.00
+    if kid <= 2:
+        return round((kid1and2 * months), 2)
+    elif kid == 3:
+        return round((kid3 * months), 2)
     else:
-        return round((kwotaNaDziecko3i4 * ileMiesiecy), 2)
+        return round((kid4plus * months), 2)
 

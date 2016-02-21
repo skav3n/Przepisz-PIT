@@ -408,11 +408,11 @@
 					</tr>
 					<tr>
 						<td class="a_37c">6. RAZEM<br>Suma kwot z wierszy od 1 do 5</td>
-						<td class="b_37c">64.<p>{{ razemPKZD_P[0] }}</p></td>
-						<td class="c_37c">65.<p>{{ razemPKZD_P[1] }}</p></td>
-						<td class="d_37c">66.<p>{{ razemPKZD_P[3] }}</p></td>
+						<td class="b_37c">64.<p>{{ razemPKZD_P['przychod'] }}</p></td>
+						<td class="c_37c">65.<p>{{ razemPKZD_P['koszt'] }}</p></td>
+						<td class="d_37c">66.<p>{{ razemPKZD_P['dochod'] }}</p></td>
 						<td class="e_37c grey"></td>
-						<td class="f_37c">67.<p>{{ razemPKZD_P[2] }}</p></td>
+						<td class="f_37c">67.<p>{{ razemPKZD_P['zaplaconyPodatek'] }}</p></td>
 					</tr>
 				</table>
 				
@@ -499,11 +499,11 @@
 					</tr>
 					<tr>
 						<td class="a_37c">6. RAZEM<br>Suma kwot z wierszy od 1 do 5</td>
-						<td class="b_37c">95.<p>{{ razemPKZD_M[0] }}</p></td>
-						<td class="c_37c">96.<p>{{ razemPKZD_M[1] }}</p></td>
-						<td class="d_37c">97.<p>{{ razemPKZD_M[3] }}</p></td>
+						<td class="b_37c">95.<p>{{ razemPKZD_M['przychod'] }}</p></td>
+						<td class="c_37c">96.<p>{{ razemPKZD_M['koszt'] }}</p></td>
+						<td class="d_37c">97.<p>{{ razemPKZD_M['dochod'] }}</p></td>
 						<td class="e_37c grey"></td>
-						<td class="f_37c">98.<p>{{ razemPKZD_M[2] }}</p></td>
+						<td class="f_37c">98.<p>{{ razemPKZD_M['zaplaconyPodatek'] }}</p></td>
 					</tr>
 				</table>
 				
@@ -532,16 +532,16 @@
 					<div class="pole_dlugie1"> <b>Dochód po odliczeniu składek na ubezpieczenia społeczne</b><br>
 					Dochód podatnika - od kwoty z poz. 66 należy odjąć kwotę z poz. 99 <br>
 					Dochód małżonka - od kwoty z poz. 97 należy odjąć kwotę z poz. 100</div>
-					<div class="d_podatnik_i_mal white">103.<p>{{ odliczenia_P[0] }}</p></div>
-					<div class="d_podatnik_i_mal white">104.<p>{{ odliczenia_M[0] }}</p></div>
+					<div class="d_podatnik_i_mal white">103.<p>{{ odliczenia_P['dochMinSpol103i104'] }}</p></div>
+					<div class="d_podatnik_i_mal white">104.<p>{{ odliczenia_M['dochMinSpol103i104'] }}</p></div>
 					<div style="clear: both;"></div>
 					
 					<div class="pole_dlugie1"><b> Odliczenia od dochodu – wykazane w części B załącznika PIT/O </b><br>
 					Odliczenie podatnika nie może przekroczyć kwoty z poz. 103<br>
 					Odliczenie małżonka nie może przekroczyć kwoty z poz. 104</div>
 					
-					<div class="d_podatnik_i_mal white">105.<p>{{ odliczenia_P[1] }}</p></div>
-					<div class="d_podatnik_i_mal white">106.<p>{{ odliczenia_M[1] }}</p></div>
+					<div class="d_podatnik_i_mal white">105.<p>{{ odliczenia_P['dochMinInternet105i106'] }}</p></div>
+					<div class="d_podatnik_i_mal white">106.<p>{{ odliczenia_M['dochMinInternet105i106'] }}</p></div>
 					<div style="clear: both;"></div>
 					
 					<div class="pole_dlugie1">
@@ -579,7 +579,7 @@
 						 Od sumy kwot z poz.103 i 104 należy odjąć sumę kwot z poz.105, 106, 107 i 109.
 					 </div>
 					<div class="jedno_pole white">
-						111.<p>{{ odliczenia_P[2] + odliczenia_M[2] }}</p>
+						111.<p>{{ odliczenia_P['dochPoOdliczeniach111'] + odliczenia_M['dochPoOdliczeniach111'] }}</p>
 					</div>
 					<div style="clear: both;"></div>
 				</div>
@@ -609,7 +609,7 @@
 						 należy wpisać połowę kwoty z poz. 111
 					 </div>
 					<div class="e_37_i jedno_pole white">
-						112.<p>{{ obliczaniePodatku[0] }}</p>
+						112.<p>{{ obliczaniePodatku['podstawaOblPodatu112'] }}</p>
 					</div>
 					<div class="e_37_p pole_dlugie1">
 						<b> Obliczony podatek - zgodnie z art. 27 ust. 1 ustawy</b><br>
@@ -617,7 +617,7 @@
 						 podatek należy pomnożyć przez dwa; jeżeli wynik jest liczbą ujemną należy wpisać 0
 					</div>
 					<div class="e_37_i jedno_pole white">
-						113.<p>{{ obliczaniePodatku[1] }}</p>
+						113.<p>{{ obliczaniePodatku['obliczonyPodatek113'] }}</p>
 					</div>
 					<div class="e_37_p pole_dlugie1">
 						<b>Doliczenia do podatku</b>
@@ -630,7 +630,7 @@
 						 Do kwoty z poz. 113 należy dodać kwotę z poz. 114
 					 </div>
 					<div class="e_37_i jedno_pole white">
-						115.<p>{{ obliczaniePodatku[3] }}</p>
+						115.<p>{{ obliczaniePodatku['podatek115'] }}</p>
 					</div>
 					<div style="clear: both;"></div>
 				</div>
@@ -660,15 +660,15 @@
 							<b> Odliczenia od podatku – wykazane w części C załącznika PIT/O</b><br>
 							 Suma odliczanych kwot nie może przekroczyć podatku z poz. 115 pomniejszonego o sumę kwo z poz. 116 i 117.
 						 </div>
-						<div class="d_podatnik_i_mal white">120.<p>{{ kwotaUlgiNaDzieci_P }}</p></div>
-						<div class="d_podatnik_i_mal white">121.<p>{{ kwotaUlgiNaDzieci_M }}</p></div>
+						<div class="d_podatnik_i_mal white">120.<p>{{ obliczaniePodatku['odliczOdPod120'] }}</p></div>
+						<div class="d_podatnik_i_mal white">121.<p>{{ obliczaniePodatku['odliczOdPod121'] }}</p></div>
 						<div style="clear: both;"></div>
 						
 						<div class="pole_dlugie1">
 							<b> Podatek po odliczeniach</b><br>
 							 Od kwoty z poz. 115 należy odjąć sumę kwot z poz. 116, 117, 120 i 121
 						 </div>
-						<div class="jedno_pole white">122.<p>{{ obliczaniePodatku[4] }}</p></div>
+						<div class="jedno_pole white">122.<p>{{ obliczaniePodatku['podatekPoOdlicz122'] }}</p></div>
 						<div style="clear: both;"></div>
 						
 						<div class="pole_dlugie1">
@@ -699,14 +699,14 @@
 						  Od kwoty z poz.122 należy odjąć kwotę z poz.124
 					</div>
 					<div class="jedno_pole white">
-						126.<p>{{ obliczaniePodatku[5] }}</p>
+						126.<p>{{ obliczaniePodatku['podatekNalezny126'] | round(0) }}</p>
 					</div>
 					<div class="pole_dlugie1">
 						<b> Suma zaliczek pobranych przez płatników</b><br>
 						 Suma kwot z poz. 67 i 98.
 					 </div>
 					<div class="jedno_pole white">
-						127.<p>{{ razemPKZD_P[2] + razemPKZD_M[2] }}</p>
+						127.<p>{{ razemPKZD_P['zaplaconyPodatek'] + razemPKZD_M['zaplaconyPodatek'] }}</p>
 					</div>
 					<div class="pole_dlugie1">
 						<b> Różnica pomiędzy podatkiem należnym a sumą zaliczek pobranych przez płatników</b>
@@ -714,7 +714,7 @@
 						 Od kwoty z poz.126 należy odjąć kwotę z poz.127. Jeżeli różn. jest liczbą ujemną należy wpisać 0
 					 </div>
 					<div class="jedno_pole white">
-						128.<p>{{ obliczaniePodatku[6] }}</p>
+						128.<p>{{ obliczaniePodatku['doZaplaty128'] }}</p>
 					</div>
 					<div class="pole_dlugie1">
 						<b> Różnica pomiędzy sumą zaliczek pobranych przez płatników a podatkiem należnym</b>
@@ -722,7 +722,7 @@
 						 Od kwoty z poz.127 należy odjąć kwotę z poz.126. Jeżeli różn. jest liczbą ujemną należy wpisać 0
 					 </div>
 					<div class="jedno_pole white">
-						129.<p>{{ obliczaniePodatku[7] }}</p>
+						129.<p>{{ obliczaniePodatku['nadplata129'] }}</p>
 					</div>
 					<div style="clear: both;"></div>
 				</div>
@@ -742,14 +742,14 @@
                             <td class="white">130.
                                 {% if pitUZ %}
                                     <p>
-                                        {{ (pkzds_P[28] + pkzds_P[29])|round(2) }}
+                                        {{ pkzds_P[28] + pkzds_P[29] }}
                                     </p>
                                 {% endif %}
                             </td>
                             <td class="white">131.
                                 {% if pitUZ %}
                                     <p>
-                                        {{ (pkzds_M[28] + pkzds_M[29])|round(2)}}
+                                        {{ pkzds_M[28] + pkzds_M[29] }}
                                     </p>
                                 {% endif %}
                             </td>
@@ -761,14 +761,14 @@
                             <td class="white">132.
                                 {% if pitUZ %}
                                     <p>
-                                        {{ (kwotaUlgi_P - kwotaUlgiNaDzieci_P)|round(2) }}
+                                        {{ dodatkowyZwrot['roznica132'] }}
                                     </p>
                                 {% endif %}
                             </td>
                             <td class="white">133.
                                 {% if pitUZ %}
                                     <p>
-                                        {{ (kwotaUlgi_M - kwotaUlgiNaDzieci_M)|round(2) }}
+                                        {{ dodatkowyZwrot['roznica133'] }}
                                     </p>
                                 {% endif %}
                             </td>
@@ -779,7 +779,7 @@
                             <td colspan="2" class="white">134.
                                 {% if pitUZ %}
                                     <p>
-                                        {{ przyslugajacaKwota }}
+                                        {{ dodatkowyZwrot['przyslugujacaKwota134'] }}
                                     </p>
                                 {% endif %}
                             </td>
@@ -788,7 +788,7 @@
                             <td class="table_one">Łączna kwota zwrotu<br>
                             Suma kwot z poz.129 i 134. </td>
                             <td colspan="2" class="nadplata white">135.
-                                <p>{{ (przyslugajacaKwota + obliczaniePodatku[7])|round(0) }}</p>
+                                <p>{{ dodatkowyZwrot['lacznaKwotaZwrotu135'] }}</p>
                             </td>
                         </tr>
                     </table>
@@ -818,7 +818,7 @@
 					 <div class="i_krs132 white">138.
 						 <p>
 						 {% if jedenProcent[0] != '' %}
-							{{ (obliczaniePodatku[5] * 0.01)|round(1, 'floor') }}
+							{{ (obliczaniePodatku['podatekNalezny126'] * 0.01)|round(1, 'floor') }}
 						 {% endif %}
 						 </p>
 					 </div>
@@ -1081,8 +1081,8 @@
 							[ ] 1.  za rok ubiegły <br>
 							[ ] 2. za rok (lata) poprzedzający(e) rok ubiegły</td>
 						
-						<td rowspan="2" class="white">25.<p>{{ odliczenia_P[1] }}</p></td>
-						<td rowspan="2" class="white">26.<p>{{ odliczenia_M[1] }}</p></td>
+						<td rowspan="2" class="white">25.<p>{{ odliczenia_P['dochMinInternet105i106'] }}</p></td>
+						<td rowspan="2" class="white">26.<p>{{ odliczenia_M['dochMinInternet105i106'] }}</p></td>
 						
 					</tr>
 					<tr>
@@ -1112,8 +1112,8 @@
 						Kwotę z poz. 34 należy przenieść do poz. 65 zeznania PIT-28 lub poz. 151 zeznania PIT-36 lub
 						poz. 105 zeznania PIT-37.<br>
 						Kwotę z poz. 35 należy przenieść do poz. 152 zeznania PIT-36 lub zpo. 106 zeznania PIT-37.</td>
-						<td class="white">34.<p>{{ odliczenia_P[1] }}</p></td>
-						<td class="white">35.<p>{{ odliczenia_M[1] }}</p></td>
+						<td class="white">34.<p>{{ odliczenia_P['dochMinInternet105i106'] }}</p></td>
+						<td class="white">35.<p>{{ odliczenia_M['dochMinInternet105i106'] }}</p></td>
 					</tr>
 				</table>
 			</div>
@@ -1187,8 +1187,8 @@
 						<td colspan="2">3. Ulga, na dzieci 5)<br>
 						Wiersza tego nie wypełniają podatnicy składający załącznik PIT/O wraz z zeznaniem PIT-28.</td>
 						<td class="white">40. Liczba dzieci<p>{{ danePanel[5]|int }}</p></td>
-						<td class="white">41.<p>{{ kwotaUlgiNaDzieci_P }}</p></td>
-						<td class="white">42.<p>{{ kwotaUlgiNaDzieci_M }}</p></td>
+						<td class="white">41.<p>{{ obliczaniePodatku['odliczOdPod120'] }}</p></td>
+						<td class="white">42.<p>{{ obliczaniePodatku['odliczOdPod121'] }}</p></td>
 					</tr>
 					<tr>
 						<td colspan="3">4. Ulga, o której mowa w art. 27g ustawy</td>
@@ -1207,8 +1207,8 @@
 						Kwotę z poz. 48 należy przenieść do poz. 101 zeznania PIT-28 lub poz. 186 zeznania PIT-36 lub poz. 
 						120 zeznania PIT-37.<br>
 						Kwotę z poz. 49 należy przenieść do poz. 187 zeznania PIT-36 lub poz. 121 zeznania PIT-37.</td>
-						<td class="white">48.<p>{{ kwotaUlgiNaDzieci_P }}</p></td>
-						<td class="white">49.<p>{{ kwotaUlgiNaDzieci_M }}</p></td>
+						<td class="white">48.<p>{{ obliczaniePodatku['odliczOdPod120'] }}</p></td>
+						<td class="white">49.<p>{{ obliczaniePodatku['odliczOdPod121'] }}</p></td>
 					</tr>
 				</table>
 			</div>
@@ -1372,8 +1372,8 @@
 			
 			<div class="grey borders">
 				Przysługujące odliczenie z tytułu ulgi na dzieci 8) <br>
-				<div class="kwota_podatnik white">7.<p>{{ kwotaUlgi_P }}</p></div>
-				<div class="kwota_malzonek white">8.<p>{{ kwotaUlgi_M }}</p></div>	
+				<div class="kwota_podatnik white">7.<p></p></div>
+				<div class="kwota_malzonek white">8.<p></p></div>	
 				<div style="clear: both;"></div>
 			</div>
 			
