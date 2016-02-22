@@ -171,11 +171,9 @@ def pit11():
                 self.podatek['podstawaOblPodatu112'] = round(dochodPoOdl111)
             else:
                 self.podatek['podstawaOblPodatu112'] = round(dochodPoOdl111 / 2)
-
-        def sectionF(self, sposob, dochodPoOdl111, zdrowotna, ulgaNaDzieci_P, ulgaNaDzieci_M):
             kwotaWolna = 556.02
             if self.podatek['podstawaOblPodatu112'] <= 85528:
-                obliczonyPodatek = round((dochodPoOdl111 * 0.18 - kwotaWolna), 1)
+                obliczonyPodatek = round((self.podatek['podstawaOblPodatu112'] * 0.18 - kwotaWolna), 1)
                 if obliczonyPodatek < 0:
                     obliczonyPodatek = 0
                 if self.podatek['obliczonyPodatek113'] < 0:
@@ -185,7 +183,8 @@ def pit11():
                 else:
                     self.podatek['obliczonyPodatek113'] = obliczonyPodatek * 2
             else:
-                obliczonyPodatek = round(((dochodPoOdl111 * 0.18 - kwotaWolna) + (dochodPoOdl111 - 85528) * 0.32), 2)
+                obliczonyPodatek = round(((self.podatek['podstawaOblPodatu112'] * 0.18 - kwotaWolna) +
+                                          (self.podatek['podstawaOblPodatu112'] - 85528) * 0.32), 2)
                 if obliczonyPodatek < 0:
                     obliczonyPodatek = 0.0
                 if sposob == 1.0:
@@ -195,6 +194,7 @@ def pit11():
 
             self.podatek['podatek115'] = self.podatek['obliczonyPodatek113']
 
+        def sectionF(self, zdrowotna, ulgaNaDzieci_P, ulgaNaDzieci_M):
             kwotaMaxUlgi = round((self.podatek['podatek115'] - zdrowotna), 2)
             if ulgaNaDzieci_P > 0 and ulgaNaDzieci_P > kwotaMaxUlgi:
                 self.podatek['odliczOdPod120'] = kwotaMaxUlgi
@@ -268,8 +268,7 @@ def pit11():
 
     podatek = Podatek()
     podatek.sectionE(danePanel[0], (podatnik.dochod['dochPoOdliczeniach111'] + malzonek.dochod['dochPoOdliczeniach111']))
-    podatek.sectionF(danePanel[0], (podatnik.dochod['dochPoOdliczeniach111'] + malzonek.dochod['dochPoOdliczeniach111']),
-                     (podatnik.spolecznaIzdrowotna['zdrowotna'] + malzonek.spolecznaIzdrowotna['zdrowotna']),
+    podatek.sectionF((podatnik.spolecznaIzdrowotna['zdrowotna'] + malzonek.spolecznaIzdrowotna['zdrowotna']),
                      podatnik.kwotaUlgiNaDzieci, malzonek.kwotaUlgiNaDzieci)
     podatek.sectionG((podatnik.razemPKZD['zaplaconyPodatek'] + malzonek.razemPKZD['zaplaconyPodatek']))
     podatek.sectionH((podatnik.spolecznaIzdrowotna['spoleczna'] + malzonek.spolecznaIzdrowotna['spoleczna']),
